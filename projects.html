@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
+
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+        <!--==================== TITLE and Tab Icons ====================-->
+        <title>Tanay Kumar</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/TK-Icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/TK-Icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/TK-Icon/favicon-16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+        <!-- MS Tile - for Microsoft apps
+        <meta name="msapplication-TileImage" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true" /> -->   
+
+        <!-- HTML Meta Tags -->
+        <title>Tanay Kumar</title>
+        <meta name="description" content="Extensive experience in Aerospace Robotics">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://ktanay05.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Tanay Kumar">
+        <meta property="og:description" content="Extensive experience in Aerospace Robotics">
+        <meta property="og:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="ktanay05.github.io">
+        <meta property="twitter:url" content="https://ktanay05.github.io/">
+        <meta name="twitter:title" content="Tanay Kumar">
+        <meta name="twitter:description" content="Extensive experience in Aerospace Robotics">
+        <meta name="twitter:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+        </script>
+
+
+        <!-- Crisp Chatbot 
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1ceb2e6-7b94-4347-b101-6c1389f7f827";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+        -->
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav__logo">Tanay Kumar</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="index.html#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#skills" class="nav__link">
+                                <i class="uil uil-setting nav__icon"></i> Skills
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="index.html#research" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Research
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="projects.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Projects
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="publications.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Publications
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="index.html#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                        <!--
+                        <li class="nav__item">
+                            <a href="resume.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Resume
+                            </a>
+                        </li> -->
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <!--
+                <div class="nav__btns">
+                     Theme Change Buttons 
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+                -->
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects" data-id="projects">
+                <h2 class="section__title">Projects</h2>
+
+                <div class="about__container container grid" style="display: block; width: 70%; max-width: 100%;">
+
+                    <div class="about__data"  style="width: 100%; max-width: 90vw; margin: 0 auto;">
+                        <p class="about__description" style="margin-bottom: 1rem; line-height: 1.4;">
+                            During my undergrad years, I was deeply involved in aeromodelling and aerial robotics competitions&mdash;basically, if it flew, I 
+                            wanted to build it. That hands-on excitement hasn't quite left me; these days, I still tinker and fly for fun, though my focus has 
+                            gradually shifted toward more research-driven, academic projects.
+                        </p>
+                        <p class="about__description" style="margin-top: 0rem; margin-bottom: 1rem; line-height: 1.4;"></p>
+                            What has stayed constant is my fascination with building systems that matter&mdash;projects that push boundaries and have real-world 
+                            impact. Along this journey, I've had the privilege of working alongside brilliant peers and mentors who have shaped not just my work, 
+                            but the way I think about problems.
+                        </p>
+                        <p class="about__description" style="margin-top: 1rem; margin-bottom: 1rem; line-height: 1.4;">
+                            Below is a look at some of the projects I have contributed to, with the most recent one being at the top.
+                        </p>   
+                    </div>
+                    
+
+                    <!-- Project List -->
+                    <div class="project-list">
+
+                        <!--======New Project====== -->
+                        <div class="project-item">
+                            <div class="project-header" onclick="toggleProject(this)">
+                                <strong class="project-title">FPGA based GNSS receiver development</strong>
+                                <span class="dropdown-icon">&#9660;</span>
+                            </div>
+                            <div class="project-content">
+                                <p>In this R&D project, we aimed to develop a highly configurable custom GNSS receiver for precision guidance of high spin projectiles. 
+                                    The rotating antenna and the high spin velocity of the projectile make it difficult to obtain a satellite lock. Hardware 
+                                    requirements are also sophisticated due to the high g-force acting on the projectile. Hence satellite-based navigation is a 
+                                    challenging task. Custom algorithms have been employed to optimize the FPGA core utilization, increasing the overall performance.
+                                </p>
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper" style="margin-top: 2rem;">
+                                    <div class="swiper-wrapper">
+                                        <!-- Image 1-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/FPGA.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    FPGA Hardware Setup
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- Add more slides as needed -->
+                                    </div>
+
+                                    <!-- Pagination dots -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <!--
+                                <div class="iframe__container">
+                                    <iframe class="iframe"
+                                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                                        frameborder="0"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a download href="assets/pdf/SciTech24_Tanay.pdf" class="button button--flex" target="_blank" rel="noopener" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                                        Download Presentation (PDF)
+                                    </a>
+                                </div>
+                                -->
+                          
+                            </div>
+                        </div>
+
+                        <!--======New Project====== -->
+                        <div class="project-item">
+                            <div class="project-header" onclick="toggleProject(this)">
+                                <strong class="project-title">H<sub>&infin;</sub> Robust Control of a Quadrotor Biplane Tailsitter UAV</strong>
+                                <span class="dropdown-icon">&#9660;</span>
+                            </div>
+                            <div class="project-content">
+                                <p>Description
+                                </p>
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper" style="margin-top: 2rem;">
+                                    <div class="swiper-wrapper">
+                                        <!-- Image 1-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/QBiT_1.jpg" alt="QBiT 1" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    QBiT UAV 
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- Image 2-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/QBiT_2.png" alt="QBiT 4" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    Transition phases of th QBiT UAV 
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- Image 3-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/Qbit_Indoor.png" alt="QBiT 2" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    Indoor testing of QBiT UAV at IGCL, IIT Kanpur
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- Image 4-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/QBIT_Outdoor.jpg" alt="QBiT 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    Outdoor testing of QBiT UAV at Flight Lab, IIT Kanpur
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        
+                                        <!-- Add more slides as needed -->
+                                    </div>
+
+                                    <!-- Pagination dots -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                          
+                            </div>
+                        </div>
+
+                        <!--======New Project====== -->
+                        <div class="project-item">
+                            <div class="project-header" onclick="toggleProject(this)">
+                                <strong class="project-title">Autonomous Tiltrotor UAV</strong>
+                                <span class="dropdown-icon">&#9660;</span>
+                            </div>
+                            <div class="project-content">
+                                <p>The project aimed to develop a versatile autonomous tiltrotor UAV with numerous applications. I took this project as a part of the 
+                                    student project team AeroMIT while pursuing my undergraduate degree. My work was primarily focused on flight controls, avionics and 
+                                    manufacturing of the UAV to ensure a stable flight. A simple PID control algorithm was used for the attitude tracking loop. Because 
+                                    of the unconventional configuration, ensuring flight stability was a very challenging task.
+                                </p>
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper" style="margin-top: 2rem;">
+                                    <div class="swiper-wrapper">
+                                        <!-- Image 1-->
+                                        <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                            <figure style="text-align: center;">
+                                                <img src="assets/img/Tiltrotor.jpg" alt="Tiltrotor 1" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                                    Prototype of the Tiltrotor UAV
+                                                </figcaption>
+                                            </figure>
+                                        </div>                                        
+                                        <!-- Add more slides as needed -->
+                                    </div>
+
+                                    <!-- Pagination dots -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                          
+                            </div>
+                        </div>
+
+                        <!-- Add more project blocks as needed -->
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="index.html" class="footer__title">Tanay Kumar</a><br>
+                        <span class="footer__subtitle">Aerospace Engineer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="index.html#home" class="footer__link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#about" class="footer__link">About</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#research" class="footer__link">Research</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#qualifications" class="footer__link">Qualifications</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#news" class="footer__link">News</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#contact" class="footer__link">Contact</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/tanay-kumar-46485a175/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>                            
+                        <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank" class="footer__social" title="Google Scholar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="height: 1.5rem; filter: grayscale(100%) brightness(120%) sepia(1) saturate(100%) hue-rotate(0deg);">
+                        </a>
+                        <a href="https://github.com/ktanay05" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+
+        <!--================ Image Carousel ====================-->
+        <script>
+        let swiper;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            swiper = new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
+
+        function toggleProject(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.dropdown-icon');
+            const isVisible = content.style.display === 'block';
+
+            content.style.display = isVisible ? 'none' : 'block';
+            icon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+
+            if (!isVisible && typeof swiper !== "undefined") {
+                setTimeout(() => {
+                swiper.update();
+                swiper.autoplay.start(); // explicitly trigger autoplay when shown
+                }, 100);
+            }
+        }
+        </script>
+
+
+
+    </body>
+</html>

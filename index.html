@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
+
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+        <!--==================== TITLE and Tab Icons ====================-->
+        <title>Tanay Kumar</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/TK_Icon/apple_touch_icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/TK_Icon/favicon_32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/TK_Icon/favicon_16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+        <!-- MS Tile - for Microsoft apps
+        <meta name="msapplication-TileImage" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true" /> -->   
+
+        <!-- HTML Meta Tags -->
+        <title>Tanay Kumar</title>
+        <meta name="description" content="Extensive experience in Aerospace Robotics">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://ktanay05.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Tanay Kumar">
+        <meta property="og:description" content="Extensive experience in Aerospace Robotics">
+        <meta property="og:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="ktanay05.github.io">
+        <meta property="twitter:url" content="https://ktanay05.github.io/">
+        <meta name="twitter:title" content="Tanay Kumar">
+        <meta name="twitter:description" content="Extensive experience in Aerospace Robotics">
+        <meta name="twitter:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+        </script>
+
+
+        <!-- Crisp Chatbot 
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1ceb2e6-7b94-4347-b101-6c1389f7f827";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+        -->
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Tanay Kumar</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-setting nav__icon"></i> Skills
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#research" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Research
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="projects.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Projects
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="publications.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Publications
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                        <!--
+                        <li class="nav__item">
+                            <a href="resume.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Resume
+                            </a>
+                        </li> -->
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                
+                <!--
+                <div class="nav__btns">
+                     Theme Change Buttons 
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+                -->
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home" data-id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/tanay-kumar-46485a175/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>                            
+                            <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank" class="home__social-icon" title="Google Scholar">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="height: 1.5rem; filter: grayscale(1) brightness(0.3) sepia(1) saturate(15) hue-rotate(0deg);">
+                            </a>
+                            <a href="https://github.com/ktanay05" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g mask="url(#mask0)">
+                                    <image class="home__blob-img" x='12' y='18' width="150" height="150" xlink:href="assets/img/Tanay.png"/>
+                                </g>
+                            </svg>
+                        </div> 
+
+
+
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hello There!</h1>
+                            <h3 class="home__subtitle">I am Tanay Kumar  </h3>
+                            <p class="home__description">PhD Student in Aerosapce Engineering at Texas A&M University</p>
+                            <a href="#contact" class="button button--flex" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">
+                                Contact Me <i class="uil uil-message button__icon" style="font-size: 1rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll Down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about" data-id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">Introduction</span>
+
+                <div class="about__container container grid" style="display: block; width: 60%; max-width: 100%;">
+
+
+                    <div class="about__data"  style="width: 100%; max-width: 90vw; margin: 0 auto;">
+                        <p class="about__description" style="margin-bottom: 1rem;">
+                            I'm an aerospace GNC researcher with a passion for innovation and exploration. 
+                            I bring my unique skills and qualities to every experience, both personal and professional. 
+                            Through this site, I hope to share my journey, goals, and research projects with you. 
+                            Please feel free to explore and reach out to me directly.
+                        </p>
+                        <p>
+                            Want to know more about me?
+                                <a href="about.html" class="button button--flex" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;" rel="noopener">
+                                    Know more <i class="uil uil-message button__icon" style="font-size: 1rem;"></i>
+                                </a>
+                        </p>
+
+
+                    <!--
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/ErolBicer-Resume.pdf" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== RESEARCH ====================-->
+            <section class="research section" id="research" data-id="research">
+                <h2 class="section__title">Research</h2>                
+
+                <div class="about__container container grid" style="display: block; width: 60%; max-width: 100%;">
+
+
+                    <div class="about__data"  style="width: 100%; max-width: 90vw; margin: 0 auto;">
+                        <p class="about__description" style="margin-bottom: 1rem;">
+                            My research sits at the intersection of robustness and modularity in autonomous aerospace robotics. While I 
+                            don't claim to be an applied mathematician, I'm deeply drawn to the algorithmic side of things-especially when it comes 
+                            to making autonomy more reliable, resilient, and fault-tolerant in practice. I enjoy bridging the gap between theory and 
+                            practice, and I'm just as comfortable tuning parameters in simulation as I am wiring up sensors and running tests on 
+                            hardware. For me, autonomy isn't just about elegant code-it's about making things actually work, even when they shouldn't.
+                        </p>
+                        <p>
+                            There's a detailed page for my latest <a href="projects.html"><strong style=" color: #500000;"><u> projects</u></strong></a> and 
+                            <a href="publications.html"><strong style=" color: #500000;"><u> publications</u></strong></a>. 
+                                
+                        </p>
+
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper" style="margin-top: 2rem;">
+                            <div class="swiper-wrapper">
+                                <!-- Image 1-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/SciTech.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            Presenting our research at AIAA SciTech 2025
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Image 2-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/Qbit_Indoor.png" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            Indoor testing of QBiT UAV at IGCL, IIT Kanpur
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Image 3-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/QBIT_Outdoor.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            Outdoor testing of QBiT UAV at Flight Lab, IIT Kanpur
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Image 4-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/Swarm.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            Testing of the UAV swarm developed at IGCL, IIT Kanpur
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Add more slides as needed -->
+                            </div>
+
+                            <!-- Optional navigation buttons -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
+                            <!-- Pagination dots -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!--
+            [comment]==================== SKILLS ====================
+            <section class="skills section" id="skills" data-id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">Technical Competence</span>
+
+                <div class="skills__container container grid">
+                    <div>
+                       [comment] ==================== SKILLS 1 ====================
+                        <div class="skills__content skills__open">
+                            <div class="skills__header">
+                                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">System Codes</h1>
+                                    [comment] <span class="skills__subtitle">More than 8 years</span> 
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">RELAP5 | MARS-KS | SPACE</h3>
+                                        [comment]<span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">GOTHIC | CAP</h3>
+                                        [comment]<span class="skills__number">Advanced</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div> 
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">MELCOR</h3>
+                                        [comment]<span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        [comment]==================== SKILLS 2 
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-vector-square skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">CFD Codes</h1>
+                                    [comment] <span class="skills__subtitle">More than 2 years</span> 
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">OpenFOAM</h3>
+                                        [comment]<span class="skills__number">Proficient</span
+                                    </div>
+                                    <div class="skills__bar">
+                                        [comment]<span class="skills__percantage skills__80"></span
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CUPID</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        [comment]<span class="skills__percantage skills__20"></span
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div>
+                        [comment]==================== SKILLS 3 ====================
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-arrow skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Coding Languages</h1>
+                                    [comment] <span class="skills__subtitle">More than 2 years</span> 
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">PYTHON | MATLAB</h3>
+                                        [comment]<span class="skills__number">Proficient</span
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">FORTRAN</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">C++</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML | CSS</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>  
+
+                        [comment]==================== SKILLS 4 ====================
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-code-branch skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Tools</h1>
+                                    [comment] <span class="skills__subtitle">More than 2 years</span> 
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">ERP | MS Project | Trello | Jira</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">DOS | UNIX | Git</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">PCTRAN | SNAP</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">ParaView | Salome | Origin</h3>
+                                        [comment]<span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CATIA | Mathcad | LaTeX</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__sys-code"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>  
+
+                    </div> 
+                </div>
+            </section>
+        -->
+            
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section" id="qualifications" data-id="qualification">
+                <h2 class="section__title">Qualifications</h2>
+                <span class="section__subtitle">Academic and Professional Career</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
+
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Work
+                        </div>
+                    </div>
+                    <div class="qualification__sections">
+                        <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                             <!--==================== QUALIFICATION  1 ====================-->
+                             <div class="qualification__data">
+                                <div>
+                                    <span class="qualification__degree">Ph.D.</span>
+                                    <h3 class="qualification__title">Aerospace Engineering</h3>
+                                    <span class="qualification__subtitle">Texas A&M University, USA</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2024-Present
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                             <!--==================== QUALIFICATION  2 ====================-->
+                             <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__degree">B.Tech</span>
+                                    <h4 class="qualification__title">Electronics and Communication Engineering</h4>
+                                    <span class="qualification__subtitle">Manipal Institute of Technology, India</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2018-2022
+                                    </div>
+                                </div>
+
+                            </div>
+
+                             <!--==================== QUALIFICATION  3 ====================-->
+                             <div class="qualification__data">
+                                <!-- <div></div> -->
+
+                                <!-- <div>
+                                    <span class="qualification__rounder"></span> -->
+                                    <!-- <span class="qualification__line"></span> -->
+                                <!-- </div> -->
+
+                                <!-- <div>
+                                    <h3 class="qualification__title">Nuclear Engineer</h3>
+                                    <span class="qualification__subtitle">Hacettepe University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2008 - 2013
+                                    </div>
+                                </div> -->
+
+
+                                
+                            </div>
+
+                        </div>
+
+                        <!--==================== QUALIFICATION CONTENT 2 ====================-->
+                        <div class="qualification__content" data-content id="work">
+                            <!--==================== QUALIFICATION  1 ====================-->
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__title">Graduate Teaching/Research Assistant</h3>
+                                   <span class="qualification__subtitle">Aerospace Enginnering, TAMU</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       2024 - Present
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                            <!--==================== QUALIFICATION  2 ====================-->
+                            <div class="qualification__data">
+                               <div></div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+
+                               <div>
+                                   <h3 class="qualification__title">Research Assistant</h3>
+                                   <span class="qualification__subtitle">IIT Kanpur</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       Jul 2022 - Jul 2024
+                                   </div>
+                               </div>
+
+                           </div>
+
+                            <!--==================== QUALIFICATION  3 ====================-->
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__title">Ungergraduate Researcher</h3>
+                                   <span class="qualification__subtitle">IIT Kanpur</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       Jan 2022 - Jun 2022
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                            <!--==================== QUALIFICATION  4 ====================-->
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+ 
+                                <div>
+                                    <h3 class="qualification__title">UAV Controls and Autopilot Intern</h3>
+                                    <span class="qualification__subtitle">NTRO, India</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Aug 2021 - Dec 2021
+                                    </div>
+                                </div>
+ 
+                            </div>
+
+                       </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== RECENT NEWS ====================-->
+            <section class="news section" id="news" data-id="news">
+                <h2 class="section__title">Recent News</h2>
+                <div class="news__container">
+                    <div class="news__timeline">
+      
+                        <div class="news__item">
+                            <div class="news__date">2025-07</div>
+                            <div class="news__content">
+                                I will be in Denver, CO from July 8 to 10 to present our work at ACC 2025.
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2025-06</div>
+                            <div class="news__content">
+                                I passed my PhD Qualifying Exams!
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2025-01</div>
+                            <div class="news__content">
+                                Our paper titled <a href="https://arxiv.org/abs/2410.01118"><strong>"Sparse Actuation for LPV Systems with Full-State Feedback in   
+                                    H<sub>2</sub>/H<sub>&infin;</sub> Framework"</strong></a> has been accepted at American Control Conference (ACC) 2025!
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2025-01</div>
+                            <div class="news__content">
+                                I will be in Orlando, FL from January 6 to 10 to present our work at SciTech 2025.
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2024-12</div>
+                            <div class="news__content">
+                                I will be the Teaching Assistant for the undergraduate course AERO 222: Introduction to Aerospace Computation for Spring 2025.
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2024-08</div>
+                            <div class="news__content">
+                                I will be the Teaching Assistant for the undergraduate course AERO 422: Active Controls for Aerospace Vehicle for Fall 2024.
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__date">2024-07</div>
+                            <div class="news__content">
+                                I have joined Texas A&M University as a Ph.D. student in Aerospace Engineering and will be working at <a href="https://isrlab.github.io/">
+                                Intelligent Systems Research (ISR) Lab </a> under <a href="https://engineering.tamu.edu/aerospace/profiles/rbhattacharya.html">Dr. Raktim Bhattacharya</a>.
+                            </div>
+                        </div>
+
+                        <!-- Add more news__item blocks as needed -->
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            
+            <!--==================== REQUEST MEETING ====================-->
+            <!--<section class="project section" id="meeting">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Do you have any questions?</h2>
+                            <p class="project__description">Schedule a meeting and lets discuss!</p>
+                            [comment] <a href="#meeting" class="button button--flex button--white">
+                                Send a Request
+                                <i class="uil uil-message project_icon button__icon"></i>
+                            </a> 
+                            <a href="#meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/erolbicer/onlinemeeting?hide_gdpr_banner=1&text_color=7c716a&primary_color=f9660b'});return false;" class="button button--flex button--white">
+                                Send a Request
+                                <i href="#meeting" class="uil uil-message project_icon button__icon"></i>
+                            </a>
+                        </div>
+                        <img src="assets/img/perfil.png" alt="Erol Bicer" class="project__img">
+                    </div>
+                </div>
+            </section>  -->
+
+
+            <!--==================== TESTIMONIAL ====================-->
+            <!--<section class="testimonial section" id="testimonials">
+                <h2 class="section__title">References</h2>
+                <span class="section__subtitle">Testimonials</span>
+
+                <div class="testimonial__container container swiper">
+                    <div class="swiper-wrapper">
+                         [comment]==================== TESTIMONIAL 1 ====================
+                         <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <img src="assets/img/dsk.jpg" alt="" class="testimonial__img">
+
+                                    <div>
+                                        <h3 class="testimonial__name">Mr. David S. Kessel</h3>
+                                        <span class="testimonial__client">KINGS, Research Professor</span>
+                                    </div>
+                                </div>
+                                [comment]<div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div> [comment]
+                            </div>
+                            <p class="testimonial__description">I have known Erol since 2014 when he was in my systems engineering class at KINGS and I can say without reservation that he is bright, hard working, and of the highest integrity.</p>
+                         </div>
+                         
+                         [comment]==================== TESTIMONIAL 2 ====================
+                         <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <img src="assets/img/ad.jpg" alt="" class="testimonial__img">
+
+                                    <div>
+                                        <h3 class="testimonial__name">Dr. Aya Diab</h3>
+                                        <span class="testimonial__client">KINGS, Associate Professor</span>
+                                    </div>
+                                </div>
+                                [comment] <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div> 
+                            </div>
+                            <p class="testimonial__description">I met Erol in 2016, and ever since he always impressed me with his zeal to expand his knowledge, hone his skills and take on new challenges to enhance his career.</p>
+                         </div>
+                    </div>
+
+                    [comment] Add Pagination 
+                    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                </div>
+            </section>
+        -->
+
+         
+
+            <!--==================== ONLINE MEETING ====================-->
+            <!-- <section class="meeting section" id="meeting">
+                <h2 class="section__title">Online Meeting</h2>
+                <span class="section__subtitle">Send a Request</span>
+
+                <div class="meeting__container container grid">
+                    <div class="meeting__content">
+                        <div class="zeeg__container">
+                            <iframe class="iframe-meeting" width="100%" height="100%" src="https://zeeg.me/erol/onlinemeeting"></iframe>
+                         </div>                        
+                    </div>   
+                 </div>
+            </section> -->
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact" data-id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <!--<span class="section__subtitle">Get in Touch</span>-->
+
+                <div class="contact__container container grid" style="margin-top: 2rem;">
+                    <div>                       
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>                                 
+                                <p><a class="contact__subtitle" href="mailto:ktanay@tamu.edu">ktanay@tamu.edu</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">College Station, TX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="contact__input" id="fullName" onkeyup="validateName()">
+                                <span id="name-error" class="contact__subtitle"></span>
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" placeholder="Enter email address" class="contact__input" id="email_id" onkeyup="validateEmail()">
+                                <span id="email-error" class="contact__subtitle"></span>
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter a subject line" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" cols="0" rows="7" placeholder="Enter your message" class="contact__input" id="message" onkeyup="validateMessage()"></textarea>
+                            <span id="message-error" class="contact__subtitle"></span>
+                        </div>
+                        <div>
+                            <a onclick="return SendMail()" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="#" class="footer__title">Tanay Kumar</a><br>
+                        <span class="footer__subtitle">Aerospace Engineer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#home" class="footer__link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#research" class="footer__link">Research</a>
+                        </li>
+
+                        <li>
+                            <a href="#qualifications" class="footer__link">Qualifications</a>
+                        </li>
+
+                        <li>
+                            <a href="#news" class="footer__link">News</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/tanay-kumar-46485a175/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>                            
+                        <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank" class="footer__social" title="Google Scholar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="height: 1.5rem; filter: grayscale(100%) brightness(120%) sepia(1) saturate(100%) hue-rotate(0deg);">
+                        </a>
+                        <a href="https://github.com/ktanay05" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+
+        <!--================ Image Carousel ====================-->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+
+            // Disable swipe and touch gestures
+            simulateTouch: false,
+            allowTouchMove: false,
+
+            // Disable autoplay
+            autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            }); 
+        </script>
+    </body>
+</html>

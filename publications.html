@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
+
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+        <!--==================== TITLE and Tab Icons ====================-->
+        <title>Tanay Kumar</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/TK-Icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/TK-Icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/TK-Icon/favicon-16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+        <!-- MS Tile - for Microsoft apps
+        <meta name="msapplication-TileImage" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true" /> -->   
+
+        <!-- HTML Meta Tags -->
+        <title>Tanay Kumar</title>
+        <meta name="description" content="Extensive experience in Aerospace Robotics">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://ktanay05.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Tanay Kumar">
+        <meta property="og:description" content="Extensive experience in Aerospace Robotics">
+        <meta property="og:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="ktanay05.github.io">
+        <meta property="twitter:url" content="https://ktanay05.github.io/">
+        <meta name="twitter:title" content="Tanay Kumar">
+        <meta name="twitter:description" content="Extensive experience in Aerospace Robotics">
+        <meta name="twitter:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+        </script>
+
+
+        <!-- Crisp Chatbot 
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f1ceb2e6-7b94-4347-b101-6c1389f7f827";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+        -->
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav__logo">Tanay Kumar</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="index.html#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#skills" class="nav__link">
+                                <i class="uil uil-setting nav__icon"></i> Skills
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="index.html#research" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Research
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="projects.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Projects
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="publications.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Publications
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="index.html#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                        <!--
+                        <li class="nav__item">
+                            <a href="resume.html" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Resume
+                            </a>
+                        </li> -->
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <!--
+                <div class="nav__btns">
+                     Theme Change Buttons 
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+                -->
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        
+            <!--==================== PUBLICATIONS ====================-->
+            <section class="publication section" id="publication" data-id="publication">
+                <h2 class="section__title">Publicaitons</h2>
+
+                <div class="about__container container grid" style="display: block; width: 70%; max-width: 100%;">
+
+                    <div class="about__data"  style="width: 100%; max-width: 90vw; margin: 0 auto;">
+                        <p class="about__description" style="margin-bottom: 1rem; line-height: 1.4;">
+                            Here's a curated collection of my research work&mdash;papers I've poured time, brainpower, and far too much coffee into. 
+                            You can also find the full list on my <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank" 
+                            rel="noopener"><strong style=" color: #500000;">Google Scholar</strong></a> profile, which might be a bit more up to date since it gets refreshed automatically. 
+                        </p>
+                        <p class="about__description" style="margin-top: 0rem; margin-bottom: 1rem; line-height: 1.4;">
+                            All papers are publicly accessible&mdash;because science should be shared, not shelved. But if you run into a paywall or can't access 
+                            something, feel free to reach out&mdash;I'll happily send you a copy. Research is better when it is open and collaborative!
+                        </p>   
+                    </div>
+
+                    <!-- Publication List -->
+                    <!-- Journal Publications -->
+                    <h3 class="about__data" style="color: #500000; margin-top: 3rem;">Journal Publications</h3>
+                        <ol style="margin-left: 1.2rem; margin-bottom: 2rem;">
+                            <!-- Add more journal publications here -->
+                             Working on a journal paper. Hopefully it will be out there soon!
+                            <!--<li>Kumar, T., et al. “Sparse Actuation for LPV Systems with Full-State Feedback in H<sub>2</sub>/H<sub>&infin;</sub> Framework.” <i>IEEE Transactions on Control Systems Technology</i>, 2024.</li>-->                          
+                        </ol>
+
+                    <!-- Conference Publications -->
+                    <h3 style="color: #500000; margin-top: 2rem;">Conference Publications</h3>
+                        <ol style="margin-left: 1.2rem; margin-bottom: 2rem;">
+                            <!-- Add more conference publications here -->
+                            <li><b>​Kumar, T.</b>, and Bhattacharya, R., <i>"Sparse Actuation for LPV Systems with Full-State Feedback in H<sub>2</sub>/H<sub>&infin;</sub> 
+                            Framework"</i>. Accepted for publication at ACC 2025. &nbsp;&nbsp;
+                            <a href="https://arxiv.org/abs/2410.01118" target="_blank" rel="noopener" class="button button--flex" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">PDF</a>
+
+                            <li>Shubham, S., <b>​Kumar, T.</b>, Sanwale, J., and Kothari, M., <i>"SDR-Based NavIC and GPS Receiver"</i>. In AIAA SciTech Forum 2025 
+                            (p 2552). &nbsp;&nbsp; 
+                            <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2025-2552" target="_blank" rel="noopener" class="button button--flex" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">PDF </a>
+                            &nbsp;&nbsp;<a download="" href="assets/pdf/SciTech25_GPS.pdf" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;" class="button button--flex" target="_blank" rel="noopener">PPT</a>
+                            
+                            <li> <b>Kumar, T.</b>, Kothari, M., and Bhattacharya, R., <i>"H<sub>&infin;</sub> Robust Control of a Quadrotor Biplane Tailsitter UAV"</i>. 
+                            In AIAA SciTech 2024 Forum (p. 0318). &nbsp;&nbsp; 
+                            <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2024-0318" target="_blank" rel="noopener" class="button button--flex" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">PDF </a>
+                            &nbsp;&nbsp;<a download="" href="assets/pdf/SciTech24_Tanay.pdf" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;" class="button button--flex" target="_blank" rel="noopener">PPT</a>
+                             
+                        </ol>
+                </div>
+
+                
+            
+            
+
+            </section>
+
+            
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="index.html" class="footer__title">Tanay Kumar</a><br>
+                        <span class="footer__subtitle">Aerospace Engineer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="index.html#home" class="footer__link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#about" class="footer__link">About</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#research" class="footer__link">Research</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#qualifications" class="footer__link">Qualifications</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#news" class="footer__link">News</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#contact" class="footer__link">Contact</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/tanay-kumar-46485a175/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>                            
+                        <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank" class="footer__social" title="Google Scholar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="height: 1.5rem; filter: grayscale(100%) brightness(120%) sepia(1) saturate(100%) hue-rotate(0deg);">
+                        </a>
+                        <a href="https://github.com/ktanay05" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+
+        <!--================ Image Carousel ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+
+            // Disable swipe and touch gestures
+            simulateTouch: false,
+            allowTouchMove: false,
+
+            // Disable autoplay
+            autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            }); 
+        </script>
+    </body>
+</html>
