@@ -16,11 +16,4 @@
 - Chatbot integration is from [Crisp](https://crisp.chat/en/)
 -->
 
-### Landing Page Light
-
-![preview img](./assets/snaps/light.png)
-
-### Landing Page Dark
-
-![preview img](./assets/snaps/dark.png)
 
