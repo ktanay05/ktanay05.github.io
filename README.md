@@ -1,6 +1,7 @@
-# Erol Bicer's Responsive Portfolio Website
-## Website URL: www.erolbicer.com
+# Tanay Kumar's Website
+## Website URL: https://ktanay05.github.io
 
+<!--
 - The design is based on [Bedimcode](https://github.com/bedimcode)
 - The resume is created on [FlowCV](https://flowcv.com/)
 - The email service provider is [EmailJs](https://www.emailjs.com/)
@@ -13,6 +14,7 @@
 - Added Google Tag script for [Google Analytics](https://analytics.google.com)
 - Online meeting integration is from [Calendly](https://calendly.com/)
 - Chatbot integration is from [Crisp](https://crisp.chat/en/)
+-->
 
 ### Landing Page Light
 
