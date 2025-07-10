@@ -869,33 +869,62 @@
             </section> -->
 
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact" data-id="contact">
+            <section class="contact section" id="contact" data-id="contact" >
                 <h2 class="section__title">Contact Me</h2>
                 <!--<span class="section__subtitle">Get in Touch</span>-->
 
-                <div class="contact__container container grid" style="margin-top: 2rem;">
-                    <div>                       
-
+                <div class="contact__container container" style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                    <!-- First row: Email, LinkedIn, Scholar -->
+                    <div class="contact__row" style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
                         <div class="contact__information">
                             <i class="uil uil-envelope contact__icon"></i>
-
                             <div>
-                                <h3 class="contact__title">Email</h3>                                 
+                                <h3 class="contact__title">Email</h3>
                                 <p><a class="contact__subtitle" href="mailto:ktanay@tamu.edu">ktanay@tamu.edu</a></p>
                             </div>
                         </div>
 
                         <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
+                            <i class="uil uil-linkedin contact__icon"></i>
                             <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">College Station, TX</span>
+                                <h3 class="contact__title">LinkedIn</h3>
+                                <p><a class="contact__subtitle" href="https://www.linkedin.com/in/ktanay05/" target="_blank">ktanay05</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-graduation-cap contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Scholar</h3>
+                                <p><a class="contact__subtitle" href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en" target="_blank">Tanay Kumar</a></p>
                             </div>
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <!-- Second row: GitHub, Location -->
+                    <div class="contact__row" style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+                        <div class="contact__information">
+                            <i class="uil uil-github contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">GitHub</h3>
+                                <p><a class="contact__subtitle" href="https://github.com/ktanay05" target="_blank">ktanay05</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <p><a class="contact__subtitle" href="https://maps.app.goo.gl/S3epH1mZge7xB6pi7" target="_blank">
+                                    College Station, TX
+                                </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!--
+                    <form class="contact__form grid" onsubmit="SendMail(event)">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Full Name</label>
@@ -918,12 +947,13 @@
                             <span id="message-error" class="contact__subtitle"></span>
                         </div>
                         <div>
-                            <a onclick="return SendMail()" class="button button--flex">
-                            Send Message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
+                            <button type="submit" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </button>
                         </div>
                     </form>
+                    -->
                 </div>
             </section>
         </main>
