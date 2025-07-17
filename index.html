@@ -51,7 +51,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Tanay Kumar">
         <meta property="og:description" content="Extensive experience in Aerospace Robotics">
-        <meta property="og:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+        <meta property="og:image">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
@@ -59,7 +59,7 @@
         <meta property="twitter:url" content="https://ktanay05.github.io/">
         <meta name="twitter:title" content="Tanay Kumar">
         <meta name="twitter:description" content="Extensive experience in Aerospace Robotics">
-        <meta name="twitter:image" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">
+        <meta name="twitter:image" >
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
@@ -213,7 +213,7 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about" data-id="about">
+            <section class="about section" id="about" data-id="about" style="margin-bottom: 0rem;">
                 <h2 class="section__title">About Me</h2>
                 <span class="section__subtitle">Introduction</span>
 
@@ -269,16 +269,34 @@
                         <!-- Swiper -->
                         <div class="swiper mySwiper" style="margin-top: 2rem;">
                             <div class="swiper-wrapper">
-                                <!-- Image 1-->
+                                <!-- Image 6-->
                                 <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
                                     <figure style="text-align: center;">
-                                        <img src="assets/img/SciTech.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                        <img src="assets/img/ACC25.jpg" alt="Research Image 6" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            Presenting our research at ACC 2025 in Denver, CO
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Image 5-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/ACC25_ISR.jpg" alt="Research Image 5" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
+                                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
+                                            ISR Lab at ACC 2025 with fellow researchers
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Image 4-->
+                                <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
+                                    <figure style="text-align: center;">
+                                        <img src="assets/img/SciTech.jpg" alt="Research Image 4" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
                                         <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
                                             Presenting our research at AIAA SciTech 2025
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <!-- Image 2-->
+                                <!-- Image 3-->
                                 <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
                                     <figure style="text-align: center;">
                                         <img src="assets/img/Qbit_Indoor.png" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 5px;">
@@ -287,19 +305,19 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <!-- Image 3-->
+                                <!-- Image 2-->
                                 <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
                                     <figure style="text-align: center;">
-                                        <img src="assets/img/QBIT_Outdoor.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                        <img src="assets/img/QBIT_Outdoor.jpg" alt="Research Image 2" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
                                         <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
                                             Outdoor testing of QBiT UAV at Flight Lab, IIT Kanpur
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <!-- Image 4-->
+                                <!-- Image 1-->
                                 <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center;">
                                     <figure style="text-align: center;">
-                                        <img src="assets/img/Swarm.jpg" alt="Research Image 3" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
+                                        <img src="assets/img/Swarm.jpg" alt="Research Image 1" style="max-height: 200px; width: auto; height: 100%; border-radius: 10px;">
                                         <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #500000;">
                                             Testing of the UAV swarm developed at IGCL, IIT Kanpur
                                         </figcaption>
@@ -1049,6 +1067,37 @@
                 prevEl: ".swiper-button-prev",
             },
             }); 
+        </script>
+
+        <script>
+            function SendMail(event) {
+                event.preventDefault(); // Prevent page reload
+
+                const fullName = document.getElementById("fullName").value;
+                const email = document.getElementById("email_id").value;
+                const subject = document.getElementById("subject").value;
+                const message = document.getElementById("message").value;
+
+                // Optional basic validation
+                if (!fullName || !email || !message) {
+                    swal("Please fill out all required fields.", "", "warning");
+                    return;
+                }
+
+                emailjs.send("your_service_id", "your_template_id", {
+                    from_name: fullName,
+                    from_email: email,
+                    subject: subject,
+                    message: message
+                })
+                .then(function () {
+                    swal("Success!", "Message sent successfully!", "success");
+                    document.querySelector(".contact__form").reset(); // clear form
+                }, function (error) {
+                    swal("Oops!", "Something went wrong. Please try again later.", "error");
+                    console.error("EmailJS error:", error);
+                });
+            }
         </script>
     </body>
 </html>
