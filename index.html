@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ============================================
+       SEO ESSENTIALS
+       ============================================ -->
+
+  <!-- 1. Page title — most important SEO tag -->
+  <title>Tanay K. </title>
+
+  <!-- 2. Meta description — shows under your link in Google -->
+  <meta name="description" 
+        content="Tanay K. is a PhD student in Aerospace Engineering at Texas A&M University, 
+                 working on Robotics, safe autonomy , machine learning, robust control, GNC and Optimization. 
+                 Advised by Prof. Raktim Bhattacharya."/>
+
+  <!-- 3. Keywords (minor signal but still useful) -->
+  <meta name="keywords" 
+        content="Tanay K., Tanay Kumar, PhD student, Texas A&M University, Robotics, safe autonomy , machine learning, robust control, GNC, Optimization
+                aerospace Engineering, space systems, space robotics, uncertanity, Intelligent Systems Research Lab, ISR Lab, Prof. Raktim Bhattacharya, research"/>
+
+  <!-- 4. Author -->
+  <meta name="author" content="Tanay K."/>
+
+  <!-- 5. Robots — tell Google to index everything -->
+  <meta name="robots" content="index, follow"/>
+
+  <!-- 6. Canonical URL — prevents duplicate content issues -->
+  <link rel="canonical" href="https://ktanay05.github.io/"/>
+
+  <!-- ============================================
+       OPEN GRAPH  (controls how link looks when
+       shared on Twitter, LinkedIn, WhatsApp etc.)
+       ============================================ -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://ktanay05.github.io/"/>
+  <meta property="og:title"       content="Tanay K. | PhD Student in AE"/>
+  <meta property="og:description" content="PhD student in Aerospace Engineering at Texas A&M University. 
+                                            Research in ML, Robotics, GNC, Autonomy and Robust COntrol."/>
+  <meta property="og:image"       content="https://ktanay05.github.io/assets/img/Tanay.png"/>
+  <meta property="og:image:width"  content="400"/>
+  <meta property="og:image:height" content="400"/>
+  <meta property="og:site_name"   content="Tanay K. — Academic Portfolio"/>
+  <meta property="og:locale"      content="en_US"/>
+
+  <!-- ============================================
+       TWITTER CARD  (controls Twitter preview)
+       ============================================ 
+  <meta name="twitter:card"        content="summary"/>
+  <meta name="twitter:site"        content="@YourTwitterHandle"/>
+  <meta name="twitter:creator"     content="@YourTwitterHandle"/>
+  <meta name="twitter:title"       content="Tanay K. | PhD Student in CS"/>
+  <meta name="twitter:description" content="PhD student in Computer Science at Your University. 
+                                             Research in ML, NLP, and AI Safety."/>
+  <meta name="twitter:image"       content="https://ktanay05.github.io/assets/img/profile.jpg"/> 
+  
+ -->
+
+  <!-- ============================================
+       STRUCTURED DATA (JSON-LD)
+       This is the BIGGEST SEO boost for academics.
+       Google uses this to show rich results.
+       ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tanay K.",
+    "url": "https://ktanay05.github.io/",
+    "image": "https://ktanay05.github.io/assets/img/Tanay.png",
+    "jobTitle": "PhD Student",
+    "description": "PhD student in Aerospace Engineering at Texas A&M University researching ML, Robotics, GNC, Autonomy and Robust Control.",
+    "email": "ktanay@tamu.edu",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Texas A&M University",
+      "url": "https://engineering.tamu.edu/aerospace/index.html"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Manipal Institute of Technology"
+    },
+    "sameAs": [
+      "https://github.com/ktanay05",
+      "https://linkedin.com/in/ktanay05",
+      "https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en&oi=ao"
+    ],
+    "knowsAbout": [
+      "Machine Learning",
+      "Robust Control",
+      "Safe Robotics",
+      "Robotics",
+      "Aerospace",
+      "Guidance Navigation and Control",
+      "Autonomous Systems",
+      "Optimization"
+      "Large Language Models"
+    ]
+  }
+  </script>
+
+  <!-- ============================================
+       PERFORMANCE (helps Google ranking)
+       ============================================ -->
+  <!-- Preconnect to font servers so they load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" 
+        rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Favicon — add a small icon so Google shows it in results -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+  <link rel="apple-touch-icon"      href="assets/img/favicon.png"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">TK</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"        class="nav-link">Home</a></li>
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#research"     class="nav-link">Research</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#news"         class="nav-link">News</a></li>
+        <!--<li><a href="#contact"      class="nav-link">Contact</a></li>-->
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / ABOUT ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shape"></div>
+    <div class="container hero-grid">
+
+      <!-- Left: Text -->
+      <div class="hero-text" data-animate="fade-up">
+        <span class="hero-greeting">Hello There, I'm</span>
+        <h1 class="hero-name">Tanay Kumar</h1>
+        <p class="hero-title">
+          PhD Student &nbsp;·&nbsp;
+          <span class="highlight">Texas A&M University</span>
+        </p>
+        <p class="hero-bio">
+          I am a PhD student in <strong>Aerospace Engineering</strong>, advised by 
+          <a href="https://isrlab.github.io/" target="_blank">Prof. Raktim Bhattacharya</a>. 
+          My research focuses on 
+          <em>aerospace robotics, autonomy, machine learning, </em> and 
+          <em>robust control</em>. I am broadly interested in building 
+          intelligent systems that are capable of efficiently operating in uncertain and dynamically evolving environments.
+        </p>
+
+        <!-- Quick links -->
+        <div class="hero-links" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <p class="hero-bio" style="margin-bottom: 0;">
+             Want to know more about me?
+          </p>
+          <a href="https://scholar.google.com" class="btn btn-outline btn-sm" style="padding: 4px 12px; font-size: 0.78rem;">
+              Know More
+           </a>
+        </div>
+
+        <!-- Quick links 
+        <div class="hero-links">
+          <a href="assets/files/cv.pdf" class="btn btn-primary" target="_blank">
+            <i class="fas fa-file-pdf"></i> CV
+          </a>
+          <a href="https://scholar.google.com" class="btn btn-outline" target="_blank">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+          <a href="mailto:your@email.com" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>-->
+
+        <!-- Social icons -->
+        <div class="social-icons">
+          <a href="https://github.com/ktanay05" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/ktanay05" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a href="mailto:ktanay@tamu.edu" target="_blank" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Right: Photo -->
+      <div class="hero-photo" data-animate="fade-left">
+        <div class="photo-wrapper">
+          <img src="assets/img/Tanay.png" alt="Tanay K." loading="lazy"/>
+        </div>
+        <!-- Floating badges -->
+        <div class="badge badge-1">
+          <i class="fas fa-brain"></i> Resilient Autonomy
+        </div>
+        <div class="badge badge-2">
+          <i class="fas fa-university"></i> PhD Student
+        </div>
+        <div class="badge badge-3">
+          <i class="fas fa-rocket"></i> Aerospace Systems
+        </div>
+        <div class="badge badge-4">
+          <i class="fas fa-robot"></i> Robotics
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== RESEARCH INTERESTS ========== -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <h2 class="section-title">Research <span class="section-tag">What I Work On</span></h2>
+      <p class="section-intro" style="max-width: 100%; text-align: justify;">
+        My research focuses on <strong>certifiable autonomy for intelligent aerospace systems</strong>. My work till date has been centered on <em> robust control </em> which acts as a basis for uncertanity aware planning and control 
+        with high confidence. I validate algorithms on aerospace testbeds, bridging the gap between theoretical guarantees and real hardware deployments across multiple technology readiness levels.<br>
+        
+        More recently, I have been exploring the <strong>learning-to-plan paradigm</strong>, combining transformer-based sequence models, reinforcement learning, and Gaussian Process Finite State Machines (GP-FSM) to enable 
+        long-horizon decision-making through learned abstractions and heuristics. My work sits at the intersection of algorithmic rigor and physical implementation — I am equally at home running simulations 
+        as I am wiring up sensors and running tests on hardware.
+      </p>
+      <div class="research-grid">
+
+        <!-- ✏️ Edit interest cards here -->
+
+        <div class="research-card" data-animate="fade-up">
+          <div class="research-card-header">
+            <div class="research-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Learning to Plan</h3>
+          </div>
+          <p>Learning-based planners that use sequence models and ML to learn planning structure, abstractions, and heuristics enabling faster long-horizon decision-making in complex environments.</p>
+        </div>
+
+        <div class="research-card" data-animate="fade-up">
+          <div class="research-card-header">
+            <div class="research-icon">
+              <i class="fas fa-stamp"></i>
+            </div>
+            <h3>Certifiable Autonomy</h3>
+          </div>
+          <p>Developing robust, uncertainty-aware control and planning methods with safety and performance guarantees for reliable learning-enabled autonomy beyond idealized assumptions.</p>
+        </div>
+
+        <div class="research-card" data-animate="fade-up">
+          <div class="research-card-header">
+            <div class="research-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Hardware Validation</h3>
+          </div>
+          <p>Bridging simulation and real aerospace testbeds through real-time implementation, sensing, integration, and experimental validation.</p>
+        </div>
+
+        <div class="research-card" data-animate="fade-up">
+          <div class="research-card-header">
+            <div class="research-icon">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3>Resilient Systems</h3>
+          </div>
+          <p>  Building autonomous systems that remain dependable under disturbances, model mismatch, sensor degradation, and failures by combining robust control, and uncertainty quantification.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PUBLICATIONS ========== -->
+<section class="section" id="publications">
+  <div class="container">
+    <h2 class="section-title">Publications <span class="section-tag">Papers</span></h2>
+
+    <!-- Filter buttons -->
+    <div class="pub-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="conference">Conference</button>
+      <button class="filter-btn" data-filter="workshop">Journals</button>
+      <button class="filter-btn" data-filter="preprint">Preprint</button>
+    </div>
+
+    <div class="publications-list">
+
+      <!-- PAPER 1 -->
+      <div class="pub-card" data-type="conference" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2026</span>
+          <span class="pub-venue-badge conference">Conference</span>
+          <span class="pub-title-inline">
+            <a>Robust Attitude Control of Nonlinear Multi-Rotor Dynamics with LFT Models and &#x210B;<sub>&infin;</sub> Performance</a>
+            &nbsp;in&nbsp;
+            <em>American Control Conference 2026</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2510.00208" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-1">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM ROW: authors only now 
+        <div class="pub-bottom-row">
+          <span class="pub-authors">
+            <strong>Kumar, T.</strong>, and Bhattacharya, R.
+          </span>
+        </div>-->
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-1">
+          <pre>@article{kumar2025robust,
+            title={Robust Attitude Control of Nonlinear Multi-Rotor Dynamics with LFT Models and $$\backslash$mathcal $\{$H$\}$ \_$\backslash$infty $ Performance},
+            author={Kumar, Tanay and Bhattacharya, Raktim},
+            journal={arXiv preprint arXiv:2510.00208},
+            year={2025}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-1')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- PAPER 2 -->
+      <div class="pub-card" data-type="conference" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2025</span>
+          <span class="pub-venue-badge conference">Conference</span>
+          <span class="pub-title-inline">
+            <a>&#x210B;<sub>&infin;</sub> Optimal Navigation in the Cislunar Space with LFT Models </a>
+            &nbsp;in&nbsp;
+            <em> IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI) 2025</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2509.06317" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-2">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM ROW: authors only now 
+        <div class="pub-bottom-row">
+          <span class="pub-authors">
+            <strong>Kumar, T.</strong>, and Bhattacharya, R.
+          </span>
+        </div>-->
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-2">
+          <pre>@inproceedings{kumar2025mathcal,
+            title={$$\backslash$mathcal $\{$H$\}$ \_ $\{$$\backslash$infty$\}$ $ Optimal Navigation in the Cislunar Space with LFT Models},
+            author={Kumar, Tanay and Bhattacharya, Raktim},
+            booktitle={2025 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI)},
+            pages={1--6},
+            year={2025},
+            organization={IEEE}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-2')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- PAPER 3 -->
+      <div class="pub-card" data-type="conference" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2025</span>
+          <span class="pub-venue-badge conference">Conference</span>
+          <span class="pub-title-inline">
+            <a>Sparse Actuation for LPV Systems with Full-State Feedback in &#x210B;<sub>2</sub>/&#x210B;<sub>&infin;</sub> Framework </a>
+            &nbsp;in&nbsp;
+            <em> American Control Conference 2025</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2410.01118" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-3">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM ROW: authors only now 
+        <div class="pub-bottom-row">
+          <span class="pub-authors">
+            <strong>Kumar, T.</strong>, and Bhattacharya, R.
+          </span>
+        </div>-->
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-3">
+          <pre>@article{kumar2024sparse,
+            title={Sparse Actuation for LPV Systems with Full-State Feedback in $$\backslash$mathcal $\{$H$\}$ \_2/$\backslash$mathcal $\{$H$\}$ \_$\backslash$infty $ Framework},
+            author={Kumar, Tanay and Bhattacharya, Raktim},
+            journal={arXiv preprint arXiv:2410.01118},
+            year={2024}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-3')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- PAPER 4 -->
+      <div class="pub-card" data-type="conference" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2025</span>
+          <span class="pub-venue-badge conference">Conference</span>
+          <span class="pub-title-inline">
+            <a>SDR-based NavIC and GPS Receiver</a>
+            &nbsp;in&nbsp;
+            <em> AIAA SciTech Forum 2025</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://www.researchgate.net/profile/Jitu-Sanwale-2/publication/387822797_SDR-Based_NavIC_and_GPS_Receiver/links/690b4914a404d65709a29c39/SDR-Based-NavIC-and-GPS-Receiver.pdf" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-4">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM ROW: authors only now 
+        <div class="pub-bottom-row">
+          <span class="pub-authors">
+            <strong>Kumar, T.</strong>, and Bhattacharya, R.
+          </span>
+        </div>-->
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-4">
+          <pre>@inproceedings{shubham2025sdr,
+            title={SDR-based NavIC and GPS Receiver},
+            author={Shubham, Shubham and Kumar, Tanay and Sanwale, Jitu and Kothari, Mangal},
+            booktitle={AIAA SCITECH 2025 Forum},
+            pages={2552},
+            year={2025}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-4')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- PAPER 5 -->
+      <div class="pub-card" data-type="conference" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2024</span>
+          <span class="pub-venue-badge conference">Conference</span>
+          <span class="pub-title-inline">
+            <a>&#x210B;<sub>&infin;</sub> Robust Control of a Quadrotor Biplane Tailsitter UAV </a>
+            &nbsp;in&nbsp;
+            <em> AIAA SciTech Forum 2025</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2024-0318" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-5">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-5">
+          <pre>@inproceedings{kumar2024h,
+            title={H∞ Robust Control of a Quadrotor Biplane Tailsitter UAV},
+            author={Kumar, Tanay and Kothari, Mangal and Bhattacharya, Raktim},
+            booktitle={AIAA SCITECH 2024 Forum},
+            pages={0318},
+            year={2024}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-5')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- PAPER 6 -->
+      <div class="pub-card" data-type="preprint" data-animate="fade-up">
+
+        <!-- TOP ROW: year | badge | title in venue | buttons -->
+        <div class="pub-top-row">
+          <span class="pub-year">2023</span>
+          <span class="pub-venue-badge preprint">arXiv</span>
+          <span class="pub-title-inline">
+            <a>Insights to the Forensic Investigation of a Custom Built UAV </a>
+            &nbsp;in&nbsp;
+            <em> arXiv preprint 2023</em>
+          </span>
+
+          <!-- ✅ Moved here from pub-bottom-row -->
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2308.14494" class="pub-link" target="_blank">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <button class="pub-link bibtex-toggle-btn" data-target="bib-5">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- BIBTEX DROPDOWN -->
+        <div class="bibtex-box" id="bib-6">
+          <pre>@article{kumar2023insights,
+            title={Insights to the Forensic Investigation of a Custom Built UAV},
+            author={Kumar, Tanay and Kothari, Mangal},
+            journal={arXiv preprint arXiv:2308.14494},
+            year={2023}
+          }</pre>
+          <button class="bibtex-copy-btn" onclick="copyBibtex('bib-6')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+
+  <!-- ============================================
+     PROJECTS SECTION
+     ============================================ -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+
+    <p class="section-tag">Projects</p>
+    <h2 class="section-title">Selected Work</h2>
+    <p class="section-intro">
+      A selection of research projects, tools, and experiments 
+      I have built or contributed to.
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT CARD 1 -->
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title-row">
+            <h3 class="project-title">Quadrotor Biplane Tailsitter</h3>
+            <div class="project-actions">
+              <a href="projects/quadrotor-tailsitter.html" 
+                 class="project-arrow-btn" 
+                 title="View Project Details">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/YourGitHub/quadrotor-tailsitter" 
+                 target="_blank" 
+                 class="project-github-btn" 
+                 title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-description">
+            Designed and implemented an H∞ robust controller for a quadrotor 
+            biplane tailsitter UAV capable of transitioning between hover and 
+            forward flight using LFT uncertainty models.
+          </p>
+        </div>
+        <div class="project-card-bottom">
+          <div class="project-tags">
+            <span class="project-tag-pill">Robust Control</span>
+            <span class="project-tag-pill">UAV</span>
+            <span class="project-tag-pill">MATLAB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 2 -->
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title-row">
+            <h3 class="project-title">Cislunar Navigation</h3>
+            <div class="project-actions">
+              <a href="projects/cislunar-navigation.html" 
+                 class="project-arrow-btn" 
+                 title="View Project Details">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/YourGitHub/cislunar-nav" 
+                 target="_blank" 
+                 class="project-github-btn" 
+                 title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-description">
+            Developed H∞ optimal navigation algorithms for spacecraft 
+            operating in the cislunar space using LFT models and 
+            multisensor fusion for robust state estimation.
+          </p>
+        </div>
+        <div class="project-card-bottom">
+          <div class="project-tags">
+            <span class="project-tag-pill">H∞ Control</span>
+            <span class="project-tag-pill">Navigation</span>
+            <span class="project-tag-pill">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 3 -->
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title-row">
+            <h3 class="project-title">Sparse Actuation LPV</h3>
+            <div class="project-actions">
+              <a href="projects/sparse-actuation.html" 
+                 class="project-arrow-btn" 
+                 title="View Project Details">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/YourGitHub/sparse-actuation" 
+                 target="_blank" 
+                 class="project-github-btn" 
+                 title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-description">
+            Formulated sparse actuation strategies for Linear 
+            Parameter-Varying (LPV) systems using a combined H2/H∞ 
+            framework with full-state feedback to minimize actuator usage.
+          </p>
+        </div>
+        <div class="project-card-bottom">
+          <div class="project-tags">
+            <span class="project-tag-pill">LPV Systems</span>
+            <span class="project-tag-pill">Optimization</span>
+            <span class="project-tag-pill">MATLAB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 4 -->
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title-row">
+            <h3 class="project-title">Learning to Plan</h3>
+            <div class="project-actions">
+              <a href="projects/learning-to-plan.html" 
+                 class="project-arrow-btn" 
+                 title="View Project Details">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/YourGitHub/learning-to-plan" 
+                 target="_blank" 
+                 class="project-github-btn" 
+                 title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-description">
+            Exploring transformer-based sequence models and GP-FSM for 
+            long-horizon decision-making in complex aerospace environments, 
+            combining RL with learned planning abstractions.
+          </p>
+        </div>
+        <div class="project-card-bottom">
+          <div class="project-tags">
+            <span class="project-tag-pill">Transformers</span>
+            <span class="project-tag-pill">RL</span>
+            <span class="project-tag-pill">PyTorch</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .projects-grid -->
+  </div>
+</section>
+
+  <!-- ========== NEWS ========== -->
+  <section class="section" id="news">
+    <div class="container">
+      <h2 class="section-title">News <span class="section-tag">Latest Updates</span></h2>
+      <div class="news-list">
+
+        <!-- ✏️ Add / remove news items here -->
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Feb 2026</span>
+          <p class="news-text">
+            📄 Paper accepted at <strong>American Control Conference 2026</strong> — 
+            <em>"Robust Attitude Control of Nonlinear Multi-Rotor Dynamics with LFT Models and &#x210B;<sub>&infin;</sub> Performance"</em>
+          </p>
+        </div>
+
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Nov 2025</span>
+          <p class="news-text">
+            🏆 Selected as one of 10 Finalists from a record-breaking participants in <strong>Texas A&M's 13th 3 Minute Thesis (3MT) Competition</strong>. 
+             Here is the link to my  <a href="https://youtu.be/E_mgfuK5bXU?si=tG8lulUt_5IeMvxV" target="_blank" >talk.</a>
+          </p>
+        </div>
+
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Jun 2025</span>
+          <p class="news-text">
+            🏆 Received <strong> Fall 2025 Graduate Excellence Fellowship Award</strong> by the Department of Aerospace Engineering at Texas A&M University.
+          </p>
+        </div>
+
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Jun 2025</span>
+          <p class="news-text">
+           ✍🏻 I passed my PhD qualifying exams!
+          </p>
+        </div>
+
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Jan 2025</span>
+          <p class="news-text">
+            📄 Paper accepted at <strong>American Control Conference 2025</strong> — 
+            <em>"Sparse Actuation for LPV Systems with Full-State Feedback in &#x210B;<sub>2</sub>/&#x210B;<sub>&infin;</sub> Framework"</em>
+          </p>
+        </div>
+
+        <div class="news-item" data-animate="fade-up">
+          <span class="news-date">Sep 2024</span>
+          <p class="news-text">
+            🎓 Started PhD at <strong>Texas A&M University</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== 
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact <span class="section-tag">Get In Touch</span></h2>
+      <div class="contact-grid">
+
+        <div class="contact-text" data-animate="fade-up">
+          <p>
+            I'm always happy to discuss research ideas, potential collaborations, or 
+            just chat about interesting problems. Feel free to reach out!
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Department of CS, Your University, City, Country</span>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-twitter"></i>
+              <a href="https://twitter.com/" target="_blank">@YourHandle</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card" data-animate="fade-up">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li>
+              <i class="fas fa-file-alt"></i>
+              <a href="assets/files/cv.pdf" target="_blank">Download CV</a>
+            </li>
+            <li>
+              <i class="fas fa-graduation-cap"></i>
+              <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/ktanay05" target="_blank">GitHub Profile</a>
+            </li>
+            
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/YourHandle" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+              <i class="fab fa-twitter"></i>
+              <a href="https://twitter.com/YourHandle" target="_blank">Twitter / X</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; 2026 Tanay K. &nbsp;·&nbsp;
+        <a href="#home">Back to top <i class="fas fa-arrow-up"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
