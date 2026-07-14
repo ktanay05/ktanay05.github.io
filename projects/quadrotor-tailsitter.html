@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quadrotor Biplane Tailsitter | Tanay Kumar</title>
+
+  <!-- Same fonts + icons as main site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Reuse your main stylesheet (go up one level) -->
+  <link rel="stylesheet" href="../style.css"/>
+
+  <style>
+    /* ---- Project page specific styles ---- */
+    .project-page {
+      padding-top: 100px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+
+    .project-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-bottom: 40px;
+      transition: var(--transition);
+    }
+
+    .project-back-btn:hover {
+      color: var(--primary);
+      gap: 12px;
+    }
+
+    .project-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--text-dark);
+      margin: 16px 0 12px;
+      line-height: 1.2;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .project-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+
+    .project-meta-item i {
+      color: var(--primary);
+    }
+
+    .project-header-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* Content body */
+    .project-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .project-content h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .project-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .project-content p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .project-content ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    .project-content ul li {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+
+    /* Sidebar */
+    .project-sidebar {
+      position: sticky;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .sidebar-card h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .sidebar-link:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-link:hover {
+      color: var(--primary);
+    }
+
+    .sidebar-link i {
+      width: 16px;
+      color: var(--primary);
+    }
+
+    /* Image placeholder */
+    .project-image-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg-gray);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.88rem;
+      margin-bottom: 32px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project-body {
+        grid-template-columns: 1fr;
+      }
+      .project-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Minimal Navbar -->
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">TK</a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html#research"      class="nav-link">Research</a>
+        <a href="../index.html#publications"  class="nav-link">Publications</a>
+        <a href="../index.html#projects"      class="nav-link">Projects</a>
+        <a href="../index.html#contact"       class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    <div class="container">
+
+      <!-- Back button -->
+      <a href="../index.html#projects" class="project-back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+
+      <!-- Project Header -->
+      <div class="project-header">
+        <p class="section-tag">Robust Control · UAV</p>
+        <h1>Quadrotor Biplane Tailsitter UAV</h1>
+        <p style="font-size:1rem; color:var(--text-mid); max-width:680px; line-height:1.8;">
+          Designing and validating an H∞ robust controller for a novel 
+          quadrotor biplane tailsitter UAV capable of vertical takeoff 
+          and efficient forward flight.
+        </p>
+        <div class="project-meta">
+          <span class="project-meta-item">
+            <i class="fas fa-calendar"></i> 2023 – 2024
+          </span>
+          <span class="project-meta-item">
+            <i class="fas fa-university"></i> Texas A&M University
+          </span>
+          <span class="project-meta-item">
+            <i class="fas fa-user"></i> Tanay Kumar, Mangal Kothari, Raktim Bhattacharya
+          </span>
+        </div>
+        <div class="project-header-actions">
+          <a href="../assets/papers/tailsitter.pdf" 
+             class="btn btn-primary" target="_blank">
+            <i class="fas fa-file-pdf"></i> Read Paper
+          </a>
+          <a href="https://github.com/YourGitHub/quadrotor-tailsitter" 
+             class="btn btn-outline" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Body -->
+      <div class="project-body">
+
+        <!-- Main Content -->
+        <div class="project-content">
+
+          <!-- Replace image placeholder with a real image when ready -->
+          <div class="project-image-placeholder">
+            <span><i class="fas fa-image" style="margin-right:8px;"></i>
+              Project image / diagram goes here
+            </span>
+          </div>
+
+          <h2>Overview</h2>
+          <p>
+            The quadrotor biplane tailsitter is a hybrid UAV platform that 
+            combines the vertical takeoff and landing (VTOL) capability
