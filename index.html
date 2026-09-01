@@ -131,7 +131,7 @@
       <a href="#home" class="nav-logo">TK</a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home"        class="nav-link">Home</a></li>
-        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="about.html"        class="nav-link">About</a></li>
         <li><a href="#research"     class="nav-link">Research</a></li>
         <li><a href="#publications" class="nav-link">Publications</a></li>
         <li><a href="#projects"     class="nav-link">Projects</a></li>
@@ -171,7 +171,7 @@
           <p class="hero-bio" style="margin-bottom: 0;">
              Want to know more about me?
           </p>
-          <a href="https://scholar.google.com" class="btn btn-outline btn-sm" style="padding: 4px 12px; font-size: 0.78rem;">
+          <a href="about.html" class="btn btn-outline btn-sm" style="padding: 5px 15px; font-size: 1rem;">
               Know More
            </a>
         </div>
@@ -572,14 +572,13 @@
   </div>
 </section>
 
-  <!-- ============================================
+<!-- ============================================
      PROJECTS SECTION
      ============================================ -->
 <section id="projects" class="section section-alt">
   <div class="container">
 
-    <p class="section-tag">Projects</p>
-    <h2 class="section-title">Selected Work</h2>
+    <h2 class="section-title">Projects <p class="section-tag">Selected Work</p></h2>
     <p class="section-intro">
       A selection of research projects, tools, and experiments 
       I have built or contributed to.
@@ -591,32 +590,28 @@
       <div class="project-card">
         <div class="project-card-top">
           <div class="project-title-row">
-            <h3 class="project-title">Quadrotor Biplane Tailsitter</h3>
+            <h3 class="project-title">Variable Pitch Quadrotor with Slung Payload</h3>
             <div class="project-actions">
-              <a href="projects/quadrotor-tailsitter.html" 
+              <a href="projects/vpq-slung-payload.html" 
                  class="project-arrow-btn" 
                  title="View Project Details">
                 <i class="fas fa-arrow-right"></i>
               </a>
-              <a href="https://github.com/YourGitHub/quadrotor-tailsitter" 
-                 target="_blank" 
-                 class="project-github-btn" 
-                 title="View on GitHub">
-                <i class="fab fa-github"></i>
-              </a>
             </div>
           </div>
+          <p class="project-meta">ISR Lab, Texas A&M University</p>
           <p class="project-description">
-            Designed and implemented an H∞ robust controller for a quadrotor 
-            biplane tailsitter UAV capable of transitioning between hover and 
-            forward flight using LFT uncertainty models.
+            Developing a variable pitch quadrotor UAV optimized for long-endurance 
+            missions with slung payload transport, integrating robust control 
+            on PX4 autopilots validated in high-fidelity simulation.
           </p>
         </div>
         <div class="project-card-bottom">
           <div class="project-tags">
             <span class="project-tag-pill">Robust Control</span>
-            <span class="project-tag-pill">UAV</span>
-            <span class="project-tag-pill">MATLAB</span>
+            <span class="project-tag-pill">PX4</span>
+            <span class="project-tag-pill">UAV Hardware</span>
+            <span class="project-tag-pill">Path Planning</span>
           </div>
         </div>
       </div>
@@ -625,32 +620,34 @@
       <div class="project-card">
         <div class="project-card-top">
           <div class="project-title-row">
-            <h3 class="project-title">Cislunar Navigation</h3>
+            <h3 class="project-title">FPGA-Based GNSS Receiver</h3>
             <div class="project-actions">
-              <a href="projects/cislunar-navigation.html" 
+              <a href="projects/fpga-gnss.html" 
                  class="project-arrow-btn" 
                  title="View Project Details">
                 <i class="fas fa-arrow-right"></i>
               </a>
-              <a href="https://github.com/YourGitHub/cislunar-nav" 
+              <a href="https://arxiv.org/pdf/2308.14494" 
                  target="_blank" 
                  class="project-github-btn" 
-                 title="View on GitHub">
-                <i class="fab fa-github"></i>
+                 title="View Paper">
+                <i class="fas fa-file-alt"></i>
               </a>
             </div>
           </div>
+          <p class="project-meta">IGCL, IIT Kanpur</p>
           <p class="project-description">
-            Developed H∞ optimal navigation algorithms for spacecraft 
-            operating in the cislunar space using LFT models and 
-            multisensor fusion for robust state estimation.
+            Built an FPGA-based GNSS receiver with robust signal acquisition 
+            under high dynamic loads, featuring custom IP cores for Xilinx 
+            and Effinix FPGAs with reduced resource footprint.
           </p>
         </div>
         <div class="project-card-bottom">
           <div class="project-tags">
-            <span class="project-tag-pill">H∞ Control</span>
-            <span class="project-tag-pill">Navigation</span>
-            <span class="project-tag-pill">Python</span>
+            <span class="project-tag-pill">FPGA</span>
+            <span class="project-tag-pill">GNSS</span>
+            <span class="project-tag-pill">Embedded Systems</span>
+            <span class="project-tag-pill">Signal Processing</span>
           </div>
         </div>
       </div>
@@ -659,66 +656,34 @@
       <div class="project-card">
         <div class="project-card-top">
           <div class="project-title-row">
-            <h3 class="project-title">Sparse Actuation LPV</h3>
+            <h3 class="project-title">&#x210B;<sub>&infin;</sub> Control of Biplane Quadrotor Tailsitter</h3>
             <div class="project-actions">
-              <a href="projects/sparse-actuation.html" 
+              <a href="projects/tailsitter-hinf.html" 
                  class="project-arrow-btn" 
                  title="View Project Details">
                 <i class="fas fa-arrow-right"></i>
               </a>
-              <a href="https://github.com/YourGitHub/sparse-actuation" 
+              <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2024-0318" 
                  target="_blank" 
                  class="project-github-btn" 
-                 title="View on GitHub">
-                <i class="fab fa-github"></i>
+                 title="View Paper">
+                <i class="fas fa-file-alt"></i>
               </a>
             </div>
           </div>
+          <p class="project-meta">IGCL, IIT Kanpur </p>
           <p class="project-description">
-            Formulated sparse actuation strategies for Linear 
-            Parameter-Varying (LPV) systems using a combined H2/H∞ 
-            framework with full-state feedback to minimize actuator usage.
+            Applied &#x210B;<sub>&infin;</sub> robust control theory to guarantee stability 
+            under physical uncertainties for a VTOL tailsitter UAV, 
+            validated in Gazebo SITL and hardware-in-the-loop using MATLAB.
           </p>
         </div>
         <div class="project-card-bottom">
           <div class="project-tags">
-            <span class="project-tag-pill">LPV Systems</span>
-            <span class="project-tag-pill">Optimization</span>
+            <span class="project-tag-pill">&#x210B;<sub>&infin;</sub> Control</span>
+            <span class="project-tag-pill">VTOL</span>
+            <span class="project-tag-pill">Gazebo SITL</span>
             <span class="project-tag-pill">MATLAB</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT CARD 4 -->
-      <div class="project-card">
-        <div class="project-card-top">
-          <div class="project-title-row">
-            <h3 class="project-title">Learning to Plan</h3>
-            <div class="project-actions">
-              <a href="projects/learning-to-plan.html" 
-                 class="project-arrow-btn" 
-                 title="View Project Details">
-                <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="https://github.com/YourGitHub/learning-to-plan" 
-                 target="_blank" 
-                 class="project-github-btn" 
-                 title="View on GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <p class="project-description">
-            Exploring transformer-based sequence models and GP-FSM for 
-            long-horizon decision-making in complex aerospace environments, 
-            combining RL with learned planning abstractions.
-          </p>
-        </div>
-        <div class="project-card-bottom">
-          <div class="project-tags">
-            <span class="project-tag-pill">Transformers</span>
-            <span class="project-tag-pill">RL</span>
-            <span class="project-tag-pill">PyTorch</span>
           </div>
         </div>
       </div>
