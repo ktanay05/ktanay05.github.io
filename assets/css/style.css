@@ -661,6 +661,14 @@ ul { list-style: none; }
    PROJECTS SECTION
    ============================================ */
 
+.project-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
