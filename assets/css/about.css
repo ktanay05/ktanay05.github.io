@@ -1,0 +1,1365 @@
+/* ============================================
+   ABOUT PAGE — about.css
+   Extends variables defined in style.css
+   
+   TABLE OF CONTENTS:
+   1.  Page Wrapper
+   2.  Slim Hero
+   3.  Stats Bar
+   4.  Vertical Side Nav
+   5.  Generic Section Wrapper
+   6.  Bio — Two Column Layout
+   7.  Sidebar Panels
+   8.  Education Timeline
+   9.  Awards & Service — Compact List
+   10. Hobbies / Sidequests Grid
+   11. Gallery — Mosaic
+   12. Lightbox
+   13. Currently / Now Grid
+   14. By the Numbers — Radar Bars
+   15. CTA Banner
+   16. Footer
+   17. Dark Mode Overrides
+   18. Responsive — Tablet (max 900px)
+   19. Responsive — Mobile (max 600px)
+============================================ */
+
+
+/* ══════════════════════════════════════════
+   1. PAGE WRAPPER
+   Clears fixed navbar height at top
+══════════════════════════════════════════ */
+.about-page {
+  padding-top: 0;
+}
+
+
+/* ══════════════════════════════════════════
+   2. SLIM HERO
+   Short banner with photo, name, chips,
+   and CTA buttons. No repeated bio text.
+══════════════════════════════════════════ */
+.about-hero-slim {
+  padding: 96px 0 52px;       /* top: 64px navbar + 32px breathing room */
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero-slim-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Gradient ring around profile photo */
+.about-photo-ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, var(--primary), #818cf8);
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+}
+
+.about-photo-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-white);
+}
+
+/* Name heading */
+.about-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-dark);
+  margin: 10px 0 6px;
+  line-height: 1.15;
+}
+
+/* Role subtitle */
+.about-role {
+  font-size: 1rem;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Info chips row */
+.about-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.chip i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+/* CTA buttons row */
+.about-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+/* ══════════════════════════════════════════
+   3. STATS BAR
+   Full-width blue bar with key numbers
+══════════════════════════════════════════ */
+.stats-bar {
+  background: var(--primary);
+  padding: 28px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-serif);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ══════════════════════════════════════════
+   4. VERTICAL SIDE NAV
+   Fixed to right edge of viewport.
+   Dots highlight the current section.
+   Tooltip label appears on hover.
+   Hidden on screens below 900px.
+══════════════════════════════════════════ */
+.side-nav {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+}
+
+.side-nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* The dot itself */
+.side-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--border);
+  transition: var(--transition);
+  display: block;
+}
+
+/* Active and hover dot states */
+.side-nav-link:hover .side-dot,
+.side-nav-link.active .side-dot {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.4);
+}
+
+/* Tooltip label — appears to the left of the dot on hover */
+.side-nav-link::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 20px;
+  background: var(--text-dark);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.side-nav-link:hover::before {
+  opacity: 1;
+  right: 22px;
+}
+
+
+/* ══════════════════════════════════════════
+   5. GENERIC SECTION WRAPPER
+   Shared by bio, education, awards, etc.
+══════════════════════════════════════════ */
+.about-section {
+  padding: 72px 0;
+}
+
+/* Section heading with left accent bar */
+.about-section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading-accent {
+  display: inline-block;
+  width: 28px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Subtitle beneath section heading */
+.about-section-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  margin-bottom: 40px;
+  max-width: 560px;
+}
+
+
+/* ══════════════════════════════════════════
+   6. BIO — TWO COLUMN LAYOUT
+   Left: long-form paragraphs
+   Right: sticky sidebar panels
+══════════════════════════════════════════ */
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-main p {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.about-main a {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+
+.about-main a:hover {
+  opacity: 0.75;
+}
+
+
+/* ══════════════════════════════════════════
+   7. SIDEBAR PANELS
+   Sticky panels for research interests,
+   tools, and spoken languages
+══════════════════════════════════════════ */
+.about-sidebar {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-panel {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.sidebar-panel-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sidebar-panel-title i {
+  color: var(--primary);
+}
+
+/* Bulleted list inside panel */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-list li {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.sidebar-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 0.7rem;
+  top: 3px;
+}
+
+/* Skill tag pills */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+
+/* ══════════════════════════════════════════
+   8. EDUCATION TIMELINE
+   Cards stacked vertically, newest first
+══════════════════════════════════════════ */
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.edu-card {
+  display: flex;
+  gap: 24px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: var(--transition);
+}
+
+.edu-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.edu-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.edu-body {
+  flex: 1;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.edu-degree {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.edu-school {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.edu-year {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 3px 12px;
+  white-space: nowrap;
+}
+
+.edu-detail {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.edu-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+
+/* ══════════════════════════════════════════
+   9. AWARDS & SERVICE — COMPACT LIST
+   Shared by both Awards and Academic Service
+   sections. Easy to extend — just add a new
+   <li class="award-row"> to the list.
+══════════════════════════════════════════ */
+.award-row-year {
+  display: flex;
+  flex-direction: column;   /* stack pills vertically in the year column */
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.year-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-radius: 99px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.service-venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.service-venue-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 10px;
+  line-height: 1.5;
+}
+
+/* Small year badge inside a venue pill */
+.venue-years {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-radius: 99px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0 0 0 28px;
+  margin-top: 32px;
+  border-left: 2px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.award-row {
+  display: grid;
+  grid-template-columns: 48px 28px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--border);
+  position: relative;
+}
+
+.award-row:last-child {
+  border-bottom: none;
+}
+
+/* Timeline dot on the left border */
+.award-row::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 2px solid var(--bg-white);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.award-row-year {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.award-row-bullet {
+  color: var(--primary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.award-row-text {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.award-row-text strong {
+  color: var(--text-dark);
+}
+
+/* Inline external link inside award text */
+.award-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-left: 8px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.award-link:hover {
+  opacity: 0.75;
+}
+
+/* ══════════════════════════════════════════
+   ACADEMIC SERVICE — GROUPED LAYOUT
+   Replaces old .awards-list in service section
+══════════════════════════════════════════ */
+
+.service-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;               /* remove gap — divider padding handles spacing now */
+  margin-top: 24px;     /* tighter top margin */
+}
+
+/* ── Group wrapper ── */
+.service-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Group title: icon + label ── */
+.service-group-title {
+  font-size: 0.85rem;          /* slightly bigger so bold reads well */
+  font-weight: 800;            /* bolder */
+  color: var(--text-dark);     /* darker so it stands out more */
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.service-group-title i {
+  color: var(--primary);
+  font-size: 0.8rem;
+  width: 16px;
+  text-align: center;
+}
+
+/* ── Tile row: wrapping pill chips ── */
+.service-tile-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 24px;    /* indent under title */
+}
+
+/* ── Individual tile ── */
+.service-tile {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+.service-tile:hover {
+  border-color: var(--primary);
+  color: var(--text-dark);
+}
+
+/* Small year badge inside a tile */
+.tile-year {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-radius: 99px;
+  padding: 1px 7px;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+/* ── Leadership: one-liners with year ── */
+.service-leadership-list {
+  list-style: none;
+  padding-left: 24px;    /* same indent as tile rows */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-leadership-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.service-leadership-year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-radius: 99px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Divider between groups ── */
+.service-group + .service-group {
+  padding-top: 16px;    /* was 32px — halved */
+  margin-top: 16px;     /* add margin instead of large padding */
+  border-top: 1px dashed var(--border);
+}
+
+
+/* ══════════════════════════════════════════
+   10. HOBBIES / SIDEQUESTS GRID
+   Responsive card grid with emoji headers
+══════════════════════════════════════════ */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.hobby-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: var(--transition);
+}
+
+.hobby-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.hobby-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  display: inline;       
+   margin-right: 8px;
+}
+
+.hobby-title {
+    font-size: 1.10rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: inline;        /* change from block to inline */
+}
+
+.hobby-desc {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+.hobby-desc a {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+
+
+/* ══════════════════════════════════════════
+   11. GALLERY — MOSAIC
+   4-column grid. Col/row spans are assigned
+   automatically by buildMosaic() in JS.
+   No manual sizing needed.
+══════════════════════════════════════════ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: var(--bg-gray);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+/* Caption overlay — fades in on hover */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.78) 0%,
+    transparent 55%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+
+/* ══════════════════════════════════════════
+   12. LIGHTBOX
+   Full-screen overlay opened when a gallery
+   item is clicked. Controlled by JS.
+══════════════════════════════════════════ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* JS adds .open to show the lightbox */
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-content img {
+  max-height: 80vh;
+  width: auto;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Caption beneath the image */
+.lightbox-content p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.88rem;
+  margin-top: 12px;
+}
+
+/* Close, prev, next buttons */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* ══════════════════════════════════════════
+   13. CURRENTLY / NOW GRID
+   Four cards: working on, reading,
+   thinking about, listening to
+══════════════════════════════════════════ */
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.now-card {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+
+.now-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.now-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.now-body {
+  flex: 1;
+}
+
+.now-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.now-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.now-list li {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.now-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 0.7rem;
+  top: 3px;
+}
+
+
+/* ══════════════════════════════════════════
+   14. BY THE NUMBERS — RADAR BARS
+   Animated progress bars that fill on
+   scroll via barObserver in JS
+══════════════════════════════════════════ */
+.radar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.radar-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  transition: var(--transition);
+}
+
+.radar-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Label row: text on left, value on right */
+.radar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.radar-label span:first-child {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.radar-val {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Bar track */
+.radar-bar-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-gray);
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Bar fill — width starts at 0 and animates via JS */
+.radar-bar {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 99px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+
+
+/* ══════════════════════════════════════════
+   15. CTA BANNER
+   Full-width blue strip at bottom of page
+══════════════════════════════════════════ */
+.about-cta {
+  background: var(--primary);
+  padding: 64px 0;
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-text h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.cta-text p {
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* Override button colours inside blue banner */
+.cta-actions .btn-primary {
+  background: #fff;
+  color: var(--primary);
+  border-color: #fff;
+}
+
+.cta-actions .btn-primary:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.cta-actions .btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  color: #fff;
+}
+
+
+/* ══════════════════════════════════════════
+   16. FOOTER
+══════════════════════════════════════════ */
+.about-page .footer {
+  background: var(--bg-gray);
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+.about-page .footer a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.about-page .footer a:hover {
+  color: var(--primary-dark);
+}
+
+
+/* ══════════════════════════════════════════
+   17. DARK MODE OVERRIDES
+   Applies when <body> has .dark-theme class
+══════════════════════════════════════════ */
+body.dark-theme .about-photo-ring img {
+  border-color: var(--bg-gray);
+}
+
+body.dark-theme .chip {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .sidebar-panel,
+body.dark-theme .edu-card,
+body.dark-theme .hobby-card,
+body.dark-theme .now-card,
+body.dark-theme .radar-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .gallery-item {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .awards-list {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .award-row {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-theme .award-row::before {
+  border-color: var(--bg-gray);
+}
+
+body.dark-theme .radar-bar-track {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .side-nav-link::before {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+}
+
+
+/* ══════════════════════════════════════════
+   18. RESPONSIVE — TABLET (max 900px)
+══════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Hero: stack photo above text */
+  .about-hero-slim-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .about-hero-chips {
+    justify-content: center;
+  }
+
+  .about-hero-actions {
+    justify-content: center;
+  }
+
+  /* Bio: single column */
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Sidebar no longer sticky */
+  .about-sidebar {
+    position: static;
+  }
+
+  /* Stats bar: 2x2 grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 16px;
+  }
+
+  .stat-item:nth-child(2),
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Gallery: 3 columns */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 140px;
+  }
+
+  /* Hide side nav on tablet */
+  .side-nav {
+    display: none;
+  }
+
+  /* CTA: stack vertically */
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-text p {
+    margin: 0 auto;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+
+}
+
+
+/* ══════════════════════════════════════════
+   19. RESPONSIVE — MOBILE (max 600px)
+══════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  .about-hero-slim {
+    padding: 80px 0 40px;
+  }
+
+  .about-photo-ring {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about-name {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    padding: 48px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .edu-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .edu-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .award-row {
+    grid-template-columns: 40px 24px 1fr;
+    gap: 8px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+  }
+
+  .now-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+} /* ← END of @media (max-width: 600px)
+     ← END of about.css              */
