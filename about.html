@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Tanay Kumar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/about.css"/>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════
+       TOP NAVBAR
+       Links back to main index.html sections
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TK</a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html"              class="nav-link">Home</a>
+        <a href="index.html#research"     class="nav-link">Research</a>
+        <a href="index.html#publications" class="nav-link">Publications</a>
+        <a href="index.html#projects"     class="nav-link">Projects</a>
+        <a href="index.html#contact"      class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       VERTICAL SIDE NAV
+       Fixed to right side of screen.
+       Dots highlight the active section as
+       the user scrolls. Hidden on mobile.
+  ══════════════════════════════════════ -->
+  <nav class="side-nav" id="side-nav">
+    <ul class="side-nav-list">
+      <li>
+        <a href="#bio" class="side-nav-link" data-label="About">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+      <!--
+      <li>
+        <a href="#education" class="side-nav-link" data-label="Education">
+          <span class="side-dot"></span>
+        </a>
+      </li>-->
+      <li>
+        <a href="#awards" class="side-nav-link" data-label="Awards">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#service" class="side-nav-link" data-label="Service">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#sidequests" class="side-nav-link" data-label="Sidequests">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#gallery" class="side-nav-link" data-label="Gallery">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+      <!--
+      <li>
+        <a href="#currently" class="side-nav-link" data-label="Currently">
+          <span class="side-dot"></span>
+        </a>
+      </li>-->
+      <li>
+        <a href="#radar" class="side-nav-link" data-label="By the Numbers">
+          <span class="side-dot"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       MAIN PAGE WRAPPER
+  ══════════════════════════════════════ -->
+  <main class="about-page">
+
+    <!-- ══════════════════════════════════════
+         SLIM HERO
+         Photo + name + chips + CTA buttons.
+         Intentionally short — no repeated bio.
+    ══════════════════════════════════════ -->
+    <section class="about-hero-slim">
+      <div class="container">
+        <div class="about-hero-slim-inner">
+
+          <!-- Profile photo with gradient ring -->
+          <div class="about-photo-ring">
+            <img src="assets/img/Tanay.png" alt="Tanay Kumar"/>
+          </div>
+
+          <!-- Name, role, chips, action buttons -->
+          <div class="about-hero-slim-text">
+            <!--<p class="section-tag">About Me</p>-->
+            <h1 class="about-name">Tanay Kumar</h1>
+            <p class="about-role">
+              PhD Student · Aerospace Engineering · Texas A&M University
+            </p>
+
+            <!-- Info chips -->
+            <div class="about-hero-chips">
+              <span class="chip">
+                <i class="fas fa-map-marker-alt"></i> College Station, TX
+              </span>
+              <span class="chip">
+                <i class="fas fa-university"></i> TAMU '24 – present
+              </span>
+            </div>
+
+            <!-- Social icons -->
+            <div class="social-icons">
+              <a href="https://github.com/ktanay05" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/ktanay05" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://scholar.google.com/citations?user=jwsGrAEAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+              <a href="mailto:ktanay@tamu.edu" target="_blank" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+            <!-- CTA buttons 
+            <div class="about-hero-actions">
+              <a href="assets/cv.pdf" class="btn btn-primary" target="_blank">
+                <i class="fas fa-file-pdf"></i> Download CV
+              </a>
+              <a href="index.html#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i> Get In Touch
+              </a>
+            </div>-->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         BIO — THE LONG VERSION
+         id="bio" — targeted by side nav dot 1
+         Two-column: main text + sticky sidebar
+    ══════════════════════════════════════ -->
+    <section class="about-section" id="bio">
+      <div class="container">
+        <div class="about-two-col">
+
+          <!-- ── Left: Bio paragraphs ── -->
+          <div class="about-main">
+            <h2 class="about-section-heading">
+              <span class="heading-accent"></span> The Long Version
+            </h2>
+
+            <p>
+              Aerospace has had me in a chokehold since my school days. I originally
+              thought I would end up somewhere in the corporate aviation world, probably
+              wearing nicer shoes and saying things like "synergy" with a straight face.
+              But during my undergraduate degree in Electronics and Communication
+              Engineering at Manipal Institute of Technology, I kept finding excuses to
+              pull myself toward aircraft, UAVs, and autonomous systems. If there was a
+              way to connect electronics, control, communication, or embedded systems to
+              aerospace, I was probably trying to sneak into it.
+            </p>
+
+            <p>
+              That curiosity took me through avionics, navigation, UAVs, and eventually
+              to aerospace Guidance, Navigation, and Control (GNC), where things finally
+              started to click. I liked the mix of clean mathematical structure and the
+              absolute chaos of the real physical world. Aerospace engineering is
+              basically where elegant equations go to get humbled by wind, noise,
+              delays, bad sensors, and hardware with strong opinions. Naturally, I found
+              that very exciting.
+            </p>
+
+            <p>
+              Before coming to Texas A&M, I was fortunate to work on projects at IIT
+              Bombay, IIT Kanpur, and NTRO, involving satellite-based navigation, UAV
+              swarms, and control systems. At IIT Kanpur, I worked with
+              <a href="https://scholar.google.com/citations?user=cbtKb54AAAAJ&hl=en" target="_blank">
+              Prof. Mangal Kothari</a>, where I got my
+              hands properly dirty with real UAV hardware: wiring sensors, debugging
+              flight controllers at deeply unreasonable hours, and learning that
+              "it works in simulation" is not the same as "it works."
+            </p>
+
+            <p>
+              I am currently a Ph.D. student in Aerospace Engineering at Texas A&M
+              University and a member of the <a href="https://isrlab.github.io/"
+                 target="_blank">Intelligent Systems Research Lab</a>, working
+              with
+              <a href="https://engineering.tamu.edu/aerospace/profiles/rbhattacharya.html"
+                 target="_blank">Prof. Raktim Bhattacharya</a>.
+              My undergraduate background in ECE gave me enough familiarity with
+              sensors, signals, embedded systems, and communication hardware to
+              understand some things faster than the average aerospace person staring
+              suspiciously at a circuit diagram.
+            </p>
+
+            <p>
+              My research focuses on robust control, robotics, certifiable autonomy, and
+              uncertainty-aware planning — especially for aerospace autonomy. I am
+              interested in questions like: How do we design controllers that stay
+              reliable when the model is only approximately right? How do autonomous
+              systems make decisions with imperfect sensors? How do we reduce actuator
+              usage without sacrificing stability or performance?
+            </p>
+
+            <p>
+              More recently, I have been exploring learning-to-plan methods. The goal
+              is to build systems that can take a long-horizon task, break it into
+              sensible sub-goals, and execute reliably even when the environment
+              changes its mind. Transformer-based sequence models and GP-FSMs seem like
+              promising ingredients in that recipe, and I am currently poking at that
+              frontier with a very curious stick.
+            </p>
+
+            <p>
+              Separately, I have a mildly concerning habit of turning every problem into
+              a linear algebra problem. If I can find a matrix, an eigenvalue, or an
+              eigenvector hiding somewhere in the room, I immediately feel better. This
+              was surprisingly useful — I got through my PhD qualifying exam in
+              materials and structures mostly by convincing myself that beams,
+              vibrations, buckling, and general structural panic were all just matrices
+              wearing different hats.
+            </p>
+
+            <p>
+              Outside the lab, I try to remain a reasonably functional human. I play
+              badminton, love to cook, and document some of my food experiments on
+              Instagram at
+              <a href="https://www.instagram.com/the.jet.lagged.chef/" target="_blank">
+                @the.jet.lagged.chef</a>.
+              I also play drums and ukulele, and I am part of a very amateur band with
+              my professors and friends — which is exactly as chaotic and fun as it
+              sounds.
+            </p>
+
+            <p>
+              My journey so far has been shaped by curiosity, good mentors, late-night
+              debugging, and an unreasonable amount of excitement about my work.
+              There is still a lot I want to build, learn, test, break, fix, and
+              understand. The to-do list is long, but honestly, that is half the fun.
+            </p>
+          </div>
+
+          <!-- ── Right: Sticky sidebar panels ── -->
+          <aside class="about-sidebar">
+
+            <!-- Research interests list -->
+            <div class="sidebar-panel">
+              <h4 class="sidebar-panel-title">
+                <i class="fas fa-flask"></i> Research Interests
+              </h4>
+              <ul class="sidebar-list">
+                <li>Robust Control</li>
+                <li>Aerospace Robotics</li>
+                <li>Certified Autonomy</li>
+                <li>UAV Hardware &amp; Testing</li>
+              </ul>
+            </div>
+
+            <!-- Tools & languages tag cloud -->
+            <div class="sidebar-panel">
+              <h4 class="sidebar-panel-title">
+                <i class="fas fa-code"></i> Tools &amp; Languages
+              </h4>
+              <div class="skill-tags">
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">ROS</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">LaTeX</span>
+                <span class="skill-tag">Linux</span>
+              </div>
+            </div>
+
+            <!-- Spoken languages -->
+            <div class="sidebar-panel">
+              <h4 class="sidebar-panel-title">
+                <i class="fas fa-language"></i> Languages
+              </h4>
+              <ul class="sidebar-list">
+                <li>English — Fluent</li>
+                <li>Hindi — Native</li>
+              </ul>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         EDUCATION
+         id="education" — side nav dot 2
+         Card per degree, newest first
+    ══════════════════════════════════════ 
+    <section class="about-section section-alt" id="education">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> Education
+        </h2>
+
+        <div class="edu-timeline">
+
+         
+          <div class="edu-card">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-body">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">PhD in Aerospace Engineering</h3>
+                  <p class="edu-school">Texas A&amp;M University</p>
+                </div>
+                <span class="edu-year">2024 – Present</span>
+              </div>
+              <p class="edu-detail">
+                Advised by Prof. Raktim Bhattacharya. Research on robust control,
+                certifiable autonomy, and learning-based planning for aerospace systems.
+                Recipient of the Graduate Excellence Fellowship.
+              </p>
+              <div class="edu-tags">
+                <span class="edu-tag">Robust Control</span>
+                <span class="edu-tag">Autonomy</span>
+                <span class="edu-tag">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="edu-body">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">B.Tech in Electronics &amp; Communication Engineering</h3>
+                  <p class="edu-school">Manipal Institute of Technology</p>
+                </div>
+                <span class="edu-year">2020 – 2024</span>
+              </div>
+              <p class="edu-detail">
+                Specialized in avionics, navigation systems, and embedded control.
+                Completed research projects at IIT Bombay, IIT Kanpur, and NTRO
+                involving UAVs, navigation, and autonomous systems.
+              </p>
+              <div class="edu-tags">
+                <span class="edu-tag">Electronics</span>
+                <span class="edu-tag">Navigation</span>
+                <span class="edu-tag">UAV Design</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>-->
+    <!-- ══════════════════════════════════════
+     AWARDS & HONOURS
+    ══════════════════════════════════════ -->
+    <section class="about-section" id="awards">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> Awards &amp; Honours
+        </h2>
+
+        <ul class="awards-list">
+
+          <li class="award-row">
+            <span class="award-row-year">2025</span>
+            <span class="award-row-bullet">
+              <i class="fas fa-trophy"></i>
+            </span>
+            <span class="award-row-text">
+              <strong>Graduate Excellence Fellowship</strong>
+              — Department of Aerospace Engineering, Texas A&amp;M University
+            </span>
+          </li>
+
+          <li class="award-row">
+            <span class="award-row-year">2025</span>
+            <span class="award-row-bullet">
+              <i class="fas fa-microphone-alt"></i>
+            </span>
+            <span class="award-row-text">
+              <strong>3-Minute Thesis Finalist (Top 10)</strong>
+              &nbsp;—&nbsp; 13th Annual 3MT Competition, Texas A&amp;M University
+              <a href="https://youtu.be/E_mgfuK5bXU?si=Nm8ENiFqYSh94uph" 
+                target="_blank" class="award-link">
+                <i class="fas fa-external-link-alt"></i> Watch talk
+              </a>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+     ACADEMIC SERVICE
+    ══════════════════════════════════════ -->
+    <section class="about-section section-alt" id="service">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> Academic Service
+        </h2>
+
+        <div class="service-sections">
+
+          <!-- ── PEER REVIEW ── -->
+          <div class="service-group">
+            <h3 class="service-group-title">
+              <i class="fas fa-search"></i> Peer Review
+            </h3>
+            <div class="service-tile-row">
+              <span class="service-tile">IFAC Mechatronics</span>
+              <span class="service-tile">Mechatronic Systems (IFAC WC 2026)</span>
+              <span class="service-tile">ACC 2026</span>
+              <span class="service-tile">ACC 2025</span>
+              <!-- Add more here as one-liner tiles -->
+            </div>
+          </div>
+
+          <!-- ── JUDGING ── -->
+          <div class="service-group">
+            <h3 class="service-group-title">
+              <i class="fas fa-gavel"></i> Judging
+            </h3>
+            <div class="service-tile-row">
+              <span class="service-tile">
+                TAMU REU Poster Session
+                <span class="tile-year">'25 '26</span>
+              </span>
+              <span class="service-tile">
+                Texas Science &amp; Engineering Fair
+                <span class="tile-year">'26</span>
+              </span>
+              <!-- Add more here as one-liner tiles -->
+            </div>
+          </div>
+
+          <!-- ── TEACHING ── -->
+          <div class="service-group">
+            <h3 class="service-group-title">
+              <i class="fas fa-chalkboard-teacher"></i> Teaching
+            </h3>
+            <div class="service-tile-row">
+              <span class="service-tile">TA and Lecture — Controls for Aerospace Vehicles(AERO 422) <span class="tile-year">Fall '24 '25 '26 </span></span>
+              <span class="service-tile">Lab Instructor — Aerospace Computation (AERO 222) <span class="tile-year">Spring '25</span> </span>
+              <!-- Add your actual teaching roles here -->
+            </div>
+          </div>
+
+          <!-- ── MENTORING ── -->
+          <div class="service-group">
+            <h3 class="service-group-title">
+              <i class="fas fa-user-graduate"></i> Mentoring
+            </h3>
+            <div class="service-tile-row">
+              <span class="service-tile">Undergraduate Capstone Mentor · ISR Lab<span class="tile-year">'25 - '26</span></span>
+              <!-- Add your actual mentoring roles here -->
+            </div>
+          </div>
+
+          <!-- ── LEADERSHIP ── -->
+          <!-- One-liner sentences with year, no tiles -->
+          <div class="service-group">
+            <h3 class="service-group-title">
+              <i class="fas fa-users"></i> Leadership
+            </h3>
+            <ul class="service-leadership-list">
+              <!-- Copy the <li> above to add more leadership roles -->
+              <li class="service-leadership-row">
+                <span class="service-leadership-year">2026-Present</span>
+                <span class="service-leadership-text">
+                  Treasurer, Aerospace Engineering Graduate Student Association (AEGSA)
+                </span>
+              </li>
+              <li class="service-leadership-row">
+                <span class="service-leadership-year">2025-Present</span>
+                <span class="service-leadership-text">
+                  Senator for Aerospace Engineering, Graduate and Professional School Government (GPSG), Texas A&M University
+                </span>
+              </li>
+              
+            </ul>
+          </div>
+
+        </div><!-- end .service-sections -->
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         SIDEQUESTS & HOBBIES
+         id="sidequests" — side nav dot 5
+         Grid of hobby cards with emoji headers
+         NOTE: no duplicate cards here
+    ══════════════════════════════════════ -->
+    <section class="about-section" id="sidequests">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> Sidequests
+        </h2>
+        <p class="about-section-sub">
+            Things I do when I'm not proving stability theorems.
+        </p>
+
+        <div class="hobbies-grid">
+
+        
+          <!-- Drums & Ukulele -->
+          <div class="hobby-card">
+            <div class="hobby-emoji">🎼</div>
+            <h4 class="hobby-title">Drums &amp; Ukulele</h4>
+            <p class="hobby-desc">
+              Part of a very amateur band with professors and friends.
+              Exactly as chaotic and fun as it sounds.
+            </p>
+          </div>
+
+          <!-- Cooking -->
+          <div class="hobby-card">
+            <div class="hobby-emoji">🍳</div>
+            <h4 class="hobby-title">Cooking</h4>
+            <p class="hobby-desc">
+              Food experiments documented at
+              <a href="https://www.instagram.com/the.jet.lagged.chef/"
+                 target="_blank">@the.jet.lagged.chef</a>.
+              The kitchen is just a lab where you eat your failures.
+            </p>
+          </div>
+
+          <!-- Badminton -->
+          <div class="hobby-card">
+            <div class="hobby-emoji">🏸</div>
+            <h4 class="hobby-title">Badminton</h4>
+            <p class="hobby-desc">
+              My go-to sport for switching off the brain.
+              Competitive enough to care about winning,
+              casual enough to still have fun losing.
+            </p>
+          </div>
+
+          <!-- Building Things -->
+          <div class="hobby-card">
+            <div class="hobby-emoji">🛠️</div>
+            <h4 class="hobby-title">Building Things</h4>
+            <p class="hobby-desc">
+              Hardware tinkerer at heart. If it has motors, sensors,
+              or blinking LEDs, I probably want to take it apart
+              and make it do something it was never supposed to.
+            </p>
+          </div>
+
+        </div><!-- end .hobbies-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         GALLERY
+         id="gallery" — side nav dot 6
+         Mosaic layout — spans assigned by JS
+         buildMosaic() runs on page load
+    ══════════════════════════════════════ -->
+    <section class="about-section section-alt" id="gallery">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> Gallery
+        </h2>
+        <p class="about-section-sub">
+          Snapshots from the lab, the field, and everywhere in between.
+        </p>
+
+        <!-- Grid — col/row spans set automatically by buildMosaic() -->
+        <div class="gallery-grid" id="gallery-grid">
+
+          <div class="gallery-item">
+            <img src="assets/img/ACC26_1.jpg" alt="ACC 2026"/>
+            <div class="gallery-overlay">
+              <span>American Control 2026, New Orleans LA</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/Capstone26.jpg" alt="Capstone26"/>
+            <div class="gallery-overlay">
+              <span>Lab display with capstone undergrads 2026</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/SRW25.jpg" alt="SRW 2026"/>
+            <div class="gallery-overlay">
+              <span>Poster presentation @ Student Research Week 2026, Texas A&M University</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/RubberBand.jpg" alt="RubberBand"/>
+            <div class="gallery-overlay">
+              <span>ft. RubberBand, yes you read it correct</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/BBQ.jpg" alt="BBQ"/>
+            <div class="gallery-overlay">
+              <span>Smoke resistant</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/3MT25-Presenting.jpg" alt="3MT Competition"/>
+            <div class="gallery-overlay">
+              <span>Finalist at Texas A&M's 13th 3 Minute Thesis Competition</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/3MT25-Friends.jpg" alt="3MT Competition"/>
+            <div class="gallery-overlay">
+              <span>Friend's Choice Award (3MT Finals)</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item">
+            <img src="assets/img/ACC25.jpg" alt="ACC 2025"/>
+            <div class="gallery-overlay">
+              <span>Presenting our research at ACC 2025 in Denver, CO</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/ACC25_ISR.jpg" alt="ACC 2025"/>
+            <div class="gallery-overlay">
+              <span>ISR Lab at ACC 2025 with fellow researchers</span>
+            </div>
+          </div>
+
+          
+          <div class="gallery-item">
+            <img src="assets/img/SciTech25.jpg" alt="SciTech 2025"/>
+            <div class="gallery-overlay">
+              <span>Presenting our research at AIAA SciTech 2025</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/SciTech25-IGCL.jpg" alt="SciTech25-IGCL5"/>
+            <div class="gallery-overlay">
+              <span>IGCL Reunion, Kenndy Space Center (FL) @ AIAA SciTech 2025</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/Qbit_Indoor.png" alt="IGCL, IIT Kanpur - Indoor Testing"/>
+            <div class="gallery-overlay">
+              <span>Indoor testing of QBiT UAV at IGCL, IIT Kanpur</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/QBIT_Outdoor.jpg" alt="IGCL, IIT Kanpur - Outdoor Testing"/>
+            <div class="gallery-overlay">
+              <span>Outdoor testing of QBiT UAV at Flight Lab, IIT Kanpur</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/img/Swarm.jpg" alt="IGCL, IIT Kanpur - UAV Swarm"/>
+            <div class="gallery-overlay">
+              <span>Testing of the UAV swarm developed at IGCL, IIT Kanpur</span>
+            </div>
+          </div>
+
+
+        <!-- ── Lightbox overlay ──
+             Opened when a gallery item is clicked.
+             Controlled entirely by JS below.        -->
+        <div class="lightbox" id="lightbox">
+          <button class="lightbox-close" id="lightbox-close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button class="lightbox-prev" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="lightbox-next" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt=""/>
+            <p  id="lightbox-caption"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  
+
+    <!-- ══════════════════════════════════════
+         BY THE NUMBERS
+         id="radar" — side nav dot 8
+         Animated progress bars that fill on
+         scroll via barObserver in JS below
+    ══════════════════════════════════════ -->
+    <section class="about-section section-alt" id="radar">
+      <div class="container">
+
+        <h2 class="about-section-heading">
+          <span class="heading-accent"></span> By the Numbers
+        </h2>
+        <p class="about-section-sub">
+          A completely unscientific self-assessment.
+        </p>
+
+        <div class="radar-grid">
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Coffee consumed to generate results</span>
+              <span class="radar-val">∞</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:100%;
+                   background:var(--primary);"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Confidence that it works in simulation</span>
+              <span class="radar-val">95%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:95%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Confidence that it works on hardware</span>
+              <span class="radar-val">40%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:40%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Problems secretly turned into linear algebra</span>
+              <span class="radar-val">87%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:87%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Ability to explain research to grandparents</span>
+              <span class="radar-val">12%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:12%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Times "just one more experiment" was actually one more</span>
+              <span class="radar-val">3%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:3%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Meals cooked vs. meals that became Instagram posts</span>
+              <span class="radar-val">60%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:60%;"></div>
+            </div>
+          </div>
+
+          <div class="radar-item">
+            <div class="radar-label">
+              <span>Research ideas that clicked mid-shower</span>
+              <span class="radar-val">71%</span>
+            </div>
+            <div class="radar-bar-track">
+              <div class="radar-bar" style="width:71%;"></div>
+            </div>
+          </div>
+
+        </div><!-- end .radar-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CTA BANNER
+         Blue full-width call-to-action strip
+         at the bottom of the page
+    ══════════════════════════════════════ -->
+    <section class="about-cta">
+      <div class="container">
+        <div class="cta-inner">
+
+          <div class="cta-text">
+            <h2>Want to collaborate or just talk?</h2>
+            <p>
+              I'm always open to interesting conversations — whether it's
+              a research idea, a collaboration, or just a good debate about
+              control theory vs. machine learning.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="mailto:ktanay@tamu.edu" class="btn btn-primary">
+              <i class="fas fa-envelope"></i> Send an Email
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- end .about-page -->
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © 2026 Tanay K.
+        · <a href="#top">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════ -->
+  <script>
+
+    // ── 1. Navbar: add shadow when page is scrolled ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── 2. Side nav: highlight dot for active section ──
+    const sideLinks   = document.querySelectorAll('.side-nav-link');
+    const pageSections = document.querySelectorAll('section[id]');
+
+    function updateSideNav() {
+      let current = '';
+      pageSections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) {
+          current = sec.getAttribute('id');
+        }
+      });
+      sideLinks.forEach(link => {
+        link.classList.toggle(
+          'active',
+          link.getAttribute('href') === `#${current}`
+        );
+      });
+    }
+    window.addEventListener('scroll', updateSideNav);
+    updateSideNav(); // run once on load
+
+    // ── 3. Mosaic Gallery
+    //       Randomly assigns col/row spans to each
+    //       gallery item so no manual sizing needed ──
+    function buildMosaic() {
+      const items = document.querySelectorAll('.gallery-item');
+
+      // [colSpan, rowSpan] — small tiles most common, large tiles rare
+      const patterns = [
+        [1, 1], [1, 1], [1, 1],  // small  — frequent
+        [1, 2], [2, 1],           // medium — occasional
+        [2, 2],                   // large  — rare
+      ];
+
+      items.forEach((item, i) => {
+        // First item always gets a large 2×2 anchor tile
+        const pick = i === 0
+          ? [2, 2]
+          : patterns[Math.floor(Math.random() * patterns.length)];
+
+        item.style.gridColumn = `span ${pick[0]}`;
+        item.style.gridRow    = `span ${pick[1]}`;
+      });
+    }
+    buildMosaic();
+
+    // ── 4. Lightbox
+    //       Click a gallery tile → opens full-screen
+    //       Arrow keys and prev/next buttons navigate
+    //       Escape or backdrop click closes it         ──
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox     = document.getElementById('lightbox');
+    const lbImg        = document.getElementById('lightbox-img');
+    const lbCaption    = document.getElementById('lightbox-caption');
+    const lbClose      = document.getElementById('lightbox-close');
+    const lbPrev       = document.getElementById('lightbox-prev');
+    const lbNext       = document.getElementById('lightbox-next');
+
+    let currentIndex = 0;
+    const images = [];
+
+    // Build image list from gallery items
+    galleryItems.forEach((item, i) => {
+      const img     = item.querySelector('img');
+      const caption = item.querySelector('.gallery-overlay span');
+      images.push({
+        src     : img.src,
+        alt     : img.alt,
+        caption : caption ? caption.textContent : ''
+      });
+      item.addEventListener('click', () => {
+        currentIndex = i;
+        openLightbox(currentIndex);
+      });
+    });
+
+    function openLightbox(index) {
+      lbImg.src             = images[index].src;
+      lbImg.alt             = images[index].alt;
+      lbCaption.textContent = images[index].caption;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lbClose.addEventListener('click', closeLightbox);
+
+       lbNext.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      openLightbox(currentIndex);
+    });
+
+    // Close lightbox when clicking the dark backdrop
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation — Escape closes, arrows navigate
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        openLightbox(currentIndex);
+      }
+      if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % images.length;
+        openLightbox(currentIndex);
+      }
+    });
+
+    // ── 5. Scroll fade-in
+    //       Watches .edu-card, .award-row, .hobby-card etc.
+    //       Fades them in from below as they enter the viewport
+    //       NOTE: .service-row removed — service uses .award-row ──
+    const fadeEls = document.querySelectorAll(
+      '.edu-card, .award-row, .hobby-card, .now-card, .gallery-item, .radar-item'
+    );
+
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity   = '1';
+          entry.target.style.transform = 'translateY(0)';
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => {
+      el.style.opacity    = '0';
+      el.style.transform  = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      fadeObserver.observe(el);
+    });
+
+    // ── 6. Radar bar animation
+    //       Bars start at width 0 and animate to their
+    //       final width when they scroll into view.
+    //       Final width is saved in data-width attribute. ──
+    const bars = document.querySelectorAll('.radar-bar');
+
+    const barObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Restore the saved final width to trigger CSS transition
+          entry.target.style.width = entry.target.getAttribute('data-width');
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    bars.forEach(bar => {
+      // Save the inline width set in HTML, then reset to 0
+      const finalWidth = bar.style.width;
+      bar.setAttribute('data-width', finalWidth);
+      bar.style.width = '0%';
+      barObserver.observe(bar);
+    });
+
+  </script>
+
+</body>
+</html>
